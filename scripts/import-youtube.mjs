@@ -1,7 +1,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { loadEnvFile, requireEnv } from './lib/env.mjs';
-import { buildSeo, mergeTopics, slugify } from './lib/seo.mjs';
+import { buildSeo, mergeTopics, shouldReuseSeo, slugify } from './lib/seo.mjs';
 
 const CHANNEL_ID = 'UCMvdDpKRU_-ZmSz9F1lKOVA';
 const API_BASE = 'https://www.googleapis.com/youtube/v3';
@@ -112,7 +112,7 @@ function normalizeVideo(item, playlistIdsByVideo, playlistNamesByVideo, existing
   };
   return {
     ...base,
-    seo: existingSeo || buildSeo(base, playlistNamesByVideo.get(item.id) || [])
+    seo: shouldReuseSeo(existingSeo) ? existingSeo : buildSeo(base, playlistNamesByVideo.get(item.id) || [])
   };
 }
 
