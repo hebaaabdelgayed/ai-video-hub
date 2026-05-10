@@ -40,6 +40,9 @@ jobs:
       - name: Build
         run: node scripts/build.mjs
 
+      - name: Add trust pages
+        run: node scripts/postbuild-trust-pages.mjs
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
