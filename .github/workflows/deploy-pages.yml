@@ -33,6 +33,9 @@ jobs:
       - name: Add trust pages
         run: node scripts/postbuild-trust-pages.mjs
 
+      - name: Apply SEO pilot
+        run: node scripts/postbuild-seo-pilot.mjs
+
       - name: Add custom domain file
         run: printf "hebaahmedai.cloud\n" > dist/CNAME
 
