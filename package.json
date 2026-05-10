@@ -7,6 +7,7 @@
   "scripts": {
     "import:youtube": "node scripts/import-youtube.mjs",
     "build": "node scripts/build.mjs",
+    "postbuild": "node scripts/postbuild-trust-pages.mjs",
     "serve": "node scripts/serve.mjs",
     "dev": "node scripts/build.mjs --watch",
     "check": "node scripts/check.mjs",
