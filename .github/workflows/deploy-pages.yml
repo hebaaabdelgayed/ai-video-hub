@@ -36,6 +36,9 @@ jobs:
       - name: Apply SEO pilot
         run: node scripts/postbuild-seo-pilot.mjs
 
+      - name: Apply video SEO enhancements
+        run: node scripts/postbuild-video-seo.mjs
+
       - name: Add custom domain file
         run: printf "hebaahmedai.cloud\n" > dist/CNAME
 
