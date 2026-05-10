@@ -49,6 +49,9 @@ jobs:
       - name: Apply video SEO enhancements
         run: node scripts/postbuild-video-seo.mjs
 
+      - name: Add article posts
+        run: node scripts/postbuild-posts.mjs
+
       - name: Add custom domain file
         run: printf "hebaahmedai.cloud\n" > dist/CNAME
 
