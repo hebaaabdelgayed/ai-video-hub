@@ -1,11 +1,20 @@
+const TAXONOMY_VERSION = 4;
+
 const TOPIC_RULES = [
-  { slug: 'chatgpt', name: 'ChatGPT', terms: ['chatgpt', 'شات جي بي تي', 'شاتجبت', 'gpt'] },
-  { slug: 'ai-tools', name: 'أدوات الذكاء الاصطناعي', terms: ['tool', 'tools', 'اداة', 'أداة', 'ادوات', 'أدوات'] },
-  { slug: 'image-ai', name: 'توليد الصور بالذكاء الاصطناعي', terms: ['image', 'photo', 'صورة', 'صور', 'midjourney', 'leonardo', 'canva'] },
-  { slug: 'video-ai', name: 'توليد الفيديو بالذكاء الاصطناعي', terms: ['video', 'فيديو', 'runway', 'pika', 'sora'] },
-  { slug: 'productivity', name: 'الإنتاجية والعمل بالذكاء الاصطناعي', terms: ['productivity', 'انتاجية', 'إنتاجية', 'work', 'شغل', 'عمل'] },
-  { slug: 'education-ai', name: 'الذكاء الاصطناعي للتعلم', terms: ['learn', 'study', 'تعلم', 'تعليم', 'دراسة'] },
-  { slug: 'prompts', name: 'برومبتات وأوامر AI', terms: ['prompt', 'prompts', 'برومبت', 'اوامر', 'أوامر'] }
+  { slug: 'openai-chatgpt', name: 'OpenAI و ChatGPT', terms: ['chatgpt', 'gpt-', 'gpt ', 'openai', 'codex', 'sora', 'dall-e', 'dalle', 'شات جي بي تي', 'شاتجبت'] },
+  { slug: 'google-gemini', name: 'Google Gemini و AI Studio', terms: ['gemini', 'google ai studio', 'vertex ai', 'nano banana', 'veo', 'imagen', 'جيميناي'] },
+  { slug: 'claude-anthropic', name: 'Claude و Anthropic', terms: ['claude', 'anthropic', 'opus', 'sonnet', 'haiku'] },
+  { slug: 'ai-agents-automation', name: 'AI Agents والأتمتة', terms: ['agent', 'agents', 'ai agent', 'n8n', 'automation', 'automate', 'mcp', 'model context protocol', 'وكيل', 'وكلاء', 'أتمتة', 'اتمتة'] },
+  { slug: 'coding-ai', name: 'البرمجة بالذكاء الاصطناعي', terms: ['coding', 'code', 'programming', 'developer', 'cursor', 'vscode', 'github', 'برمجة', 'كود', 'مطور'] },
+  { slug: 'design-image-ai', name: 'التصميم وتوليد الصور', terms: ['image', 'photo', 'design', 'canva', 'midjourney', 'leonardo', 'photoshop', 'تصميم', 'صورة', 'صور', 'فوتوشوب'] },
+  { slug: 'video-generation-ai', name: 'توليد وتحرير الفيديو', terms: ['runway', 'pika', 'veo', 'sora', 'capcut', 'video generation', 'توليد الفيديو', 'تحرير الفيديو', 'مونتاج'] },
+  { slug: 'research-study-ai', name: 'البحث والدراسة بالذكاء الاصطناعي', terms: ['notebooklm', 'zotero', 'research', 'study', 'paper', 'pdf', 'scientific', 'دراسة', 'بحث', 'مذاكرة', 'تعلم', 'تعليم'] },
+  { slug: 'presentations-documents', name: 'العروض والملفات والمستندات', terms: ['slides', 'slide deck', 'powerpoint', 'word', 'docs', 'document', 'pdf', 'presentation', 'عرض', 'عروض', 'ملف', 'مستند'] },
+  { slug: 'ai-news-comparisons', name: 'أخبار ومقارنات نماذج AI', terms: ['news', 'launch', 'release', 'compare', 'comparison', 'vs', 'benchmark', 'إطلاق', 'مقارنة', 'أخبار', 'اختبار ضد'] },
+  { slug: 'chinese-open-models', name: 'النماذج الصينية والمفتوحة', terms: ['deepseek', 'kimi', 'glm', 'qwen', 'alibaba', 'open source', 'local model', 'ollama', 'مفتوحة المصدر', 'النماذج الصينية'] },
+  { slug: 'perplexity-search', name: 'Perplexity والبحث الذكي', terms: ['perplexity', 'search ai', 'ai search', 'بحث ذكي'] },
+  { slug: 'prompts-ai-skills', name: 'Prompts ومهارات استخدام AI', terms: ['prompt', 'prompts', 'prompting', 'skill', 'skills', 'برومبت', 'أوامر', 'اوامر', 'مهارات'] },
+  { slug: 'productivity-ai-tools', name: 'أدوات الإنتاجية بالذكاء الاصطناعي', terms: ['productivity', 'tool', 'tools', 'workflow', 'browser', 'extension', 'إنتاجية', 'انتاجية', 'أداة', 'اداة', 'أدوات', 'ادوات'] }
 ];
 
 const COMMON_KEYWORDS = [
@@ -28,15 +37,35 @@ export function slugify(input, fallback = 'item') {
   return cleaned || fallback;
 }
 
-export function inferTopics(video) {
-  const haystack = `${video.title || ''} ${video.description || ''} ${(video.tags || []).join(' ')}`.toLowerCase();
-  const matches = TOPIC_RULES.filter((topic) => topic.terms.some((term) => haystack.includes(term.toLowerCase())));
-  return matches.length ? matches.map(({ slug, name }) => ({ slug, name })) : [{ slug: 'ai-tools', name: 'أدوات الذكاء الاصطناعي' }];
+function scoreTopic(rule, title, playlistText, bodyText) {
+  let score = 0;
+  for (const term of rule.terms) {
+    const normalized = term.toLowerCase();
+    if (title.includes(normalized)) score += 4;
+    if (playlistText.includes(normalized)) score += 3;
+    if (bodyText.includes(normalized)) score += 1;
+  }
+  return score;
+}
+
+export function inferTopics(video, playlistNames = []) {
+  const title = `${video.title || ''}`.toLowerCase();
+  const playlistText = playlistNames.join(' ').toLowerCase();
+  const bodyText = `${video.description || ''} ${(video.tags || []).join(' ')}`.toLowerCase();
+
+  const matches = TOPIC_RULES
+    .map((topic) => ({ ...topic, score: scoreTopic(topic, title, playlistText, bodyText) }))
+    .filter((topic) => topic.score >= 3)
+    .sort((a, b) => b.score - a.score || a.name.localeCompare(b.name, 'ar'))
+    .slice(0, 3)
+    .map(({ slug, name }) => ({ slug, name }));
+
+  return matches.length ? matches : [{ slug: 'productivity-ai-tools', name: 'أدوات الإنتاجية بالذكاء الاصطناعي' }];
 }
 
 export function buildSeo(video, playlistNames = []) {
   const title = video.title || 'فيديو عن الذكاء الاصطناعي';
-  const topics = inferTopics(video);
+  const topics = inferTopics(video, playlistNames);
   const keywords = Array.from(new Set([
     ...COMMON_KEYWORDS,
     ...topics.map((topic) => topic.name),
@@ -50,6 +79,7 @@ export function buildSeo(video, playlistNames = []) {
     : `شاهد شرح ${title} مع هبة أحمد ضمن مكتبة عربية منظمة لفيديوهات الذكاء الاصطناعي.`;
 
   return {
+    taxonomyVersion: TAXONOMY_VERSION,
     title: `${title} | شرح عربي للذكاء الاصطناعي`,
     slug: `${slugify(title, 'video')}-${video.id}`,
     metaDescription: summary.slice(0, 155),
@@ -67,6 +97,10 @@ export function buildSeo(video, playlistNames = []) {
       }
     ]
   };
+}
+
+export function shouldReuseSeo(seo) {
+  return seo?.taxonomyVersion === TAXONOMY_VERSION;
 }
 
 export function mergeTopics(videos) {
