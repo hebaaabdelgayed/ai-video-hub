@@ -1,0 +1,15 @@
+{
+  "name": "ai-video-hub",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Arabic-first static website for Heba Ahmed's AI YouTube channel.",
+  "scripts": {
+    "import:youtube": "node scripts/import-youtube.mjs",
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "dev": "node scripts/build.mjs --watch",
+    "check": "node scripts/check.mjs",
+    "verify": "node scripts/verify-dist.mjs"
+  }
+}
