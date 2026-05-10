@@ -100,13 +100,17 @@ a:hover { text-decoration: underline; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
 .path-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 
-.video-card, .topic-card, .path-card {
+.video-card, .topic-card, .path-card, .post-card {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: var(--shadow);
 }
+.post-card { padding: 18px; }
+.post-card h3 { margin: 8px 0; color: var(--ink); font-size: 1.15rem; line-height: 1.45; }
+.post-card p { margin: 0; }
+.post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px; }
 .topic-card { display: block; min-height: 132px; }
 .topic-card h3 { margin: 0 0 10px; }
 .topic-card p { margin: 0; }
@@ -130,7 +134,12 @@ a:hover { text-decoration: underline; }
 .trust-points strong, .trust-points span { display: block; }
 .trust-points span { margin-top: 6px; color: var(--muted); font-size: 0.92rem; }
 
-.video-layout { max-width: 1180px; margin: 0 auto; padding: 30px 20px; display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 24px; }
+.video-layout, .article-layout { max-width: 1180px; margin: 0 auto; padding: 30px 20px; display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 24px; align-items: start; }
+.article-content { max-width: 820px; }
+.article-body { margin-top: 26px; }
+.article-body h2 { margin: 28px 0 8px; color: var(--ink); font-size: 1.35rem; }
+.article-body p, .article-body li { color: var(--text); font-size: 1.04rem; }
+.article-body ul { margin: 10px 0; padding-inline-start: 24px; }
 .video-frame { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 8px; background: #111; }
 .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 18px; box-shadow: var(--shadow); }
 .panel + .panel { margin-top: 16px; }
@@ -144,7 +153,7 @@ a:hover { text-decoration: underline; }
 .text-page h2:first-child { margin-top: 0; }
 
 @media (max-width: 820px) {
-  .hero, .video-layout, .trust-section { grid-template-columns: 1fr; }
+  .hero, .video-layout, .article-layout, .trust-section { grid-template-columns: 1fr; }
   .stats, .path-grid, .trust-points { grid-template-columns: 1fr; }
   .section-heading { align-items: stretch; flex-direction: column; }
   .nav { align-items: flex-start; flex-direction: column; }
