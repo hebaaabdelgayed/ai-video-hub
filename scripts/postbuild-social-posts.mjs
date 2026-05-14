@@ -135,7 +135,7 @@ function patchSitemap() {
   }
 }
 
-copySocialAssets('src/social-assets', join(outDir, 'social-assets'));
+copySocialAssets('src/social-assets', join(outDir, 'assets'));
 for (const post of posts) renderPost(post);
 patchSitemap();
 
