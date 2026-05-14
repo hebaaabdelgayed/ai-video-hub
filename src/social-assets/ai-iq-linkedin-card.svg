@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-labelledby="title desc">
+  <title id="title">AI IQ infographic</title>
+  <desc id="desc">Arabic infographic about measuring frontier AI models on a human IQ scale</desc>
+  <rect width="1080" height="1080" fill="#f7f4ee"/>
+  <rect x="70" y="70" width="940" height="940" rx="36" fill="#ffffff" stroke="#ded4c6" stroke-width="3"/>
+  <circle cx="190" cy="185" r="74" fill="#0e766e"/>
+  <text x="190" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#ffffff">AI</text>
+  <text x="190" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="35" font-weight="700" fill="#ffffff">IQ</text>
+  <text x="930" y="145" text-anchor="end" font-family="Arial, sans-serif" font-size="28" fill="#665f58">Heba Ahmed AI</text>
+  <text x="930" y="245" text-anchor="end" direction="rtl" unicode-bidi="bidi-override" font-family="Arial, sans-serif" font-size="58" font-weight="700" fill="#201b16">هل نقيس ذكاء النماذج مثل البشر؟</text>
+  <text x="930" y="315" text-anchor="end" direction="rtl" unicode-bidi="bidi-override" font-family="Arial, sans-serif" font-size="32" fill="#665f58">منصة AI IQ تحول أداء Frontier AI إلى رقم قريب من مقياس IQ</text>
+  <line x1="150" y1="390" x2="930" y2="390" stroke="#ded4c6" stroke-width="3"/>
+  <g font-family="Arial, sans-serif">
+    <rect x="135" y="455" width="810" height="105" rx="22" fill="#eef8f6"/>
+    <text x="900" y="500" text-anchor="end" direction="rtl" unicode-bidi="bidi-override" font-size="32" font-weight="700" fill="#0b5f59">مؤشر مفيد</text>
+    <text x="900" y="540" text-anchor="end" direction="rtl" unicode-bidi="bidi-override" font-size="25" fill="#201b16">يسهل مقارنة النماذج بسرعة للمستخدم العادي</text>
+    <rect x="135" y="595" width="810" height="105" rx="22" fill="#fff7df"/>
+    <text x="900" y="640" text-anchor="end" direction="rtl" unicode-bidi="bidi-override" font-size="32" font-weight="700" fill="#9a6200">ليس حكما نهائيا</text>
+    <text x="900" y="680" text-anchor="end" direction="rtl" unicode-bidi="bidi-override" font-size="25" fill="#201b16">النتيجة تتغير حسب الاختبار والسؤال وطريقة القياس</text>
+    <rect x="135" y="735" width="810" height="105" rx="22" fill="#f1f0ff"/>
+    <text x="900" y="780" text-anchor="end" direction="rtl" unicode-bidi="bidi-override" font-size="32" font-weight="700" fill="#4438ca">السؤال الأهم</text>
+    <text x="900" y="820" text-anchor="end" direction="rtl" unicode-bidi="bidi-override" font-size="25" fill="#201b16">ما النموذج الأنسب للمهمة التي تريد إنجازها؟</text>
+  </g>
+  <text x="540" y="940" text-anchor="middle" direction="rtl" unicode-bidi="bidi-override" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#201b16">الأرقام مؤشر، والتجربة العملية هي الحكم</text>
+</svg>
