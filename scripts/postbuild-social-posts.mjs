@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 
 const config = JSON.parse(readFileSync('src/site.config.json', 'utf8'));
@@ -31,18 +31,21 @@ function formatDate(date) {
   return new Intl.DateTimeFormat('ar', { year: 'numeric', month: 'long', day: 'numeric' }).format(new Date(date));
 }
 
-function decodeBase64Assets(source, target) {
+function copySocialAssets(source, target) {
   if (!existsSync(source)) return;
   for (const entry of readdirSync(source, { withFileTypes: true })) {
     const sourcePath = join(source, entry.name);
     const targetPath = join(target, entry.name);
     if (entry.isDirectory()) {
-      decodeBase64Assets(sourcePath, targetPath);
+      copySocialAssets(sourcePath, targetPath);
     } else if (entry.isFile() && entry.name.endsWith('.base64')) {
       const outputPath = targetPath.replace(/\.base64$/, '');
       mkdirSync(dirname(outputPath), { recursive: true });
       const encoded = readFileSync(sourcePath, 'utf8').replace(/\s+/g, '');
       writeFileSync(outputPath, Buffer.from(encoded, 'base64'));
+    } else if (entry.isFile()) {
+      mkdirSync(dirname(targetPath), { recursive: true });
+      copyFileSync(sourcePath, targetPath);
     }
   }
 }
@@ -132,7 +135,7 @@ function patchSitemap() {
   }
 }
 
-decodeBase64Assets('src/social-assets', join(outDir, 'social-assets'));
+copySocialAssets('src/social-assets', join(outDir, 'social-assets'));
 for (const post of posts) renderPost(post);
 patchSitemap();
 
