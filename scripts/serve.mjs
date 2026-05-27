@@ -11,12 +11,18 @@ const types = {
   '.js': 'text/javascript; charset=utf-8',
   '.json': 'application/json; charset=utf-8',
   '.xml': 'application/xml; charset=utf-8',
-  '.txt': 'text/plain; charset=utf-8'
+  '.txt': 'text/plain; charset=utf-8',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.png': 'image/png',
+  '.gif': 'image/gif',
+  '.webp': 'image/webp',
+  '.svg': 'image/svg+xml'
 };
 
 createServer((request, response) => {
   const url = new URL(request.url || '/', `http://${host}:${port}`);
-  const pathname = decodeURIComponent(url.pathname);
+  const pathname = decodeURIComponent(url.pathname).replace(/^\/+/, '');
   let filePath = join(root, pathname);
 
   if (!filePath.startsWith(root)) {

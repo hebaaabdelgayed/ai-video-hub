@@ -7,15 +7,9 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
-
-concurrency:
-  group: youtube-import-and-pages
-  cancel-in-progress: false
 
 jobs:
-  import-and-deploy:
+  import:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -36,34 +30,3 @@ jobs:
         with:
           commit_message: "Update YouTube video data"
           file_pattern: data/videos.json
-
-      - name: Build
-        run: node scripts/build.mjs
-
-      - name: Add trust pages
-        run: node scripts/postbuild-trust-pages.mjs
-
-      - name: Apply SEO pilot
-        run: node scripts/postbuild-seo-pilot.mjs
-
-      - name: Apply video SEO enhancements
-        run: node scripts/postbuild-video-seo.mjs
-
-      - name: Add article posts
-        run: node scripts/postbuild-posts.mjs
-
-      - name: Add custom domain file
-        run: printf "hebaahmedai.cloud\n" > dist/CNAME
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4

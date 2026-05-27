@@ -1,20 +1,76 @@
 const TAXONOMY_VERSION = 4;
 
 const TOPIC_RULES = [
-  { slug: 'openai-chatgpt', name: 'OpenAI و ChatGPT', terms: ['chatgpt', 'gpt-', 'gpt ', 'openai', 'codex', 'sora', 'dall-e', 'dalle', 'شات جي بي تي', 'شاتجبت'] },
-  { slug: 'google-gemini', name: 'Google Gemini و AI Studio', terms: ['gemini', 'google ai studio', 'vertex ai', 'nano banana', 'veo', 'imagen', 'جيميناي'] },
-  { slug: 'claude-anthropic', name: 'Claude و Anthropic', terms: ['claude', 'anthropic', 'opus', 'sonnet', 'haiku'] },
-  { slug: 'ai-agents-automation', name: 'AI Agents والأتمتة', terms: ['agent', 'agents', 'ai agent', 'n8n', 'automation', 'automate', 'mcp', 'model context protocol', 'وكيل', 'وكلاء', 'أتمتة', 'اتمتة'] },
-  { slug: 'coding-ai', name: 'البرمجة بالذكاء الاصطناعي', terms: ['coding', 'code', 'programming', 'developer', 'cursor', 'vscode', 'github', 'برمجة', 'كود', 'مطور'] },
-  { slug: 'design-image-ai', name: 'التصميم وتوليد الصور', terms: ['image', 'photo', 'design', 'canva', 'midjourney', 'leonardo', 'photoshop', 'تصميم', 'صورة', 'صور', 'فوتوشوب'] },
-  { slug: 'video-generation-ai', name: 'توليد وتحرير الفيديو', terms: ['runway', 'pika', 'veo', 'sora', 'capcut', 'video generation', 'توليد الفيديو', 'تحرير الفيديو', 'مونتاج'] },
-  { slug: 'research-study-ai', name: 'البحث والدراسة بالذكاء الاصطناعي', terms: ['notebooklm', 'zotero', 'research', 'study', 'paper', 'pdf', 'scientific', 'دراسة', 'بحث', 'مذاكرة', 'تعلم', 'تعليم'] },
-  { slug: 'presentations-documents', name: 'العروض والملفات والمستندات', terms: ['slides', 'slide deck', 'powerpoint', 'word', 'docs', 'document', 'pdf', 'presentation', 'عرض', 'عروض', 'ملف', 'مستند'] },
-  { slug: 'ai-news-comparisons', name: 'أخبار ومقارنات نماذج AI', terms: ['news', 'launch', 'release', 'compare', 'comparison', 'vs', 'benchmark', 'إطلاق', 'مقارنة', 'أخبار', 'اختبار ضد'] },
-  { slug: 'chinese-open-models', name: 'النماذج الصينية والمفتوحة', terms: ['deepseek', 'kimi', 'glm', 'qwen', 'alibaba', 'open source', 'local model', 'ollama', 'مفتوحة المصدر', 'النماذج الصينية'] },
-  { slug: 'perplexity-search', name: 'Perplexity والبحث الذكي', terms: ['perplexity', 'search ai', 'ai search', 'بحث ذكي'] },
-  { slug: 'prompts-ai-skills', name: 'Prompts ومهارات استخدام AI', terms: ['prompt', 'prompts', 'prompting', 'skill', 'skills', 'برومبت', 'أوامر', 'اوامر', 'مهارات'] },
-  { slug: 'productivity-ai-tools', name: 'أدوات الإنتاجية بالذكاء الاصطناعي', terms: ['productivity', 'tool', 'tools', 'workflow', 'browser', 'extension', 'إنتاجية', 'انتاجية', 'أداة', 'اداة', 'أدوات', 'ادوات'] }
+  {
+    slug: 'openai-chatgpt',
+    name: 'OpenAI و ChatGPT',
+    terms: ['chatgpt', 'gpt-', 'gpt ', 'openai', 'codex', 'sora', 'dall-e', 'dalle', 'شات جي بي تي', 'شاتجبت']
+  },
+  {
+    slug: 'google-gemini',
+    name: 'Google Gemini و AI Studio',
+    terms: ['gemini', 'google ai studio', 'vertex ai', 'nano banana', 'veo', 'imagen', 'جيميناي']
+  },
+  {
+    slug: 'claude-anthropic',
+    name: 'Claude و Anthropic',
+    terms: ['claude', 'anthropic', 'opus', 'sonnet', 'haiku']
+  },
+  {
+    slug: 'ai-agents-automation',
+    name: 'AI Agents والأتمتة',
+    terms: ['agent', 'agents', 'ai agent', 'n8n', 'automation', 'automate', 'mcp', 'model context protocol', 'وكيل', 'وكلاء', 'أتمتة', 'اتمتة']
+  },
+  {
+    slug: 'coding-ai',
+    name: 'البرمجة بالذكاء الاصطناعي',
+    terms: ['coding', 'code', 'programming', 'developer', 'cursor', 'vscode', 'github', 'برمجة', 'كود', 'مطور']
+  },
+  {
+    slug: 'design-image-ai',
+    name: 'التصميم وتوليد الصور',
+    terms: ['image', 'photo', 'design', 'canva', 'midjourney', 'leonardo', 'photoshop', 'تصميم', 'صورة', 'صور', 'فوتوشوب']
+  },
+  {
+    slug: 'video-generation-ai',
+    name: 'توليد وتحرير الفيديو',
+    terms: ['runway', 'pika', 'veo', 'sora', 'capcut', 'video generation', 'توليد الفيديو', 'تحرير الفيديو', 'مونتاج']
+  },
+  {
+    slug: 'research-study-ai',
+    name: 'البحث والدراسة بالذكاء الاصطناعي',
+    terms: ['notebooklm', 'zotero', 'research', 'study', 'paper', 'pdf', 'scientific', 'دراسة', 'بحث', 'مذاكرة', 'تعلم', 'تعليم']
+  },
+  {
+    slug: 'presentations-documents',
+    name: 'العروض والملفات والمستندات',
+    terms: ['slides', 'slide deck', 'powerpoint', 'word', 'docs', 'document', 'pdf', 'presentation', 'عرض', 'عروض', 'ملف', 'مستند']
+  },
+  {
+    slug: 'ai-news-comparisons',
+    name: 'أخبار ومقارنات نماذج AI',
+    terms: ['news', 'launch', 'release', 'compare', 'comparison', 'vs', 'benchmark', 'إطلاق', 'مقارنة', 'أخبار', 'اختبار ضد']
+  },
+  {
+    slug: 'chinese-open-models',
+    name: 'النماذج الصينية والمفتوحة',
+    terms: ['deepseek', 'kimi', 'glm', 'qwen', 'alibaba', 'open source', 'local model', 'ollama', 'مفتوحة المصدر', 'النماذج الصينية']
+  },
+  {
+    slug: 'perplexity-search',
+    name: 'Perplexity والبحث الذكي',
+    terms: ['perplexity', 'search ai', 'ai search', 'بحث ذكي']
+  },
+  {
+    slug: 'prompts-ai-skills',
+    name: 'Prompts ومهارات استخدام AI',
+    terms: ['prompt', 'prompts', 'prompting', 'skill', 'skills', 'برومبت', 'أوامر', 'اوامر', 'مهارات']
+  },
+  {
+    slug: 'productivity-ai-tools',
+    name: 'أدوات الإنتاجية بالذكاء الاصطناعي',
+    terms: ['productivity', 'tool', 'tools', 'workflow', 'browser', 'extension', 'إنتاجية', 'انتاجية', 'أداة', 'اداة', 'أدوات', 'ادوات']
+  }
 ];
 
 const COMMON_KEYWORDS = [

@@ -47,12 +47,12 @@ Important expectation: the website can help discovery, brand authority, Google s
 
 ## Current Implementation State
 
+- The local workspace was empty during planning.
 - `git` and `npm` were not available in PowerShell during implementation.
-- A dependency-free Node static site scaffold exists because Node is available but npm is not.
-- Local `data/videos.json` has been imported from YouTube Data API and contains 209 videos, 33 playlists, and 7 inferred topics.
-- The GitHub repo initially uses a placeholder `data/videos.json`; run the import workflow after adding `YOUTUBE_API_KEY` as a repository secret to populate the real data.
+- A dependency-free Node static site scaffold now exists because Node is available but npm is not.
+- `data/videos.json` has been imported from YouTube Data API and currently contains 209 videos, 33 playlists, and 7 inferred topics.
 - The local API key is stored only in `.env.local`, which is ignored by `.gitignore`.
-- Generated static output is written to `dist/` and is ignored by Git.
+- Generated static output is written to `dist/`.
 - Available scripts:
   - `node scripts/import-youtube.mjs`
   - `node scripts/build.mjs`
@@ -60,6 +60,9 @@ Important expectation: the website can help discovery, brand authority, Google s
   - `node scripts/verify-dist.mjs`
   - `node scripts/serve.mjs`
 - GitHub Actions workflows exist for scheduled video import and GitHub Pages deployment.
+- Topic classification was improved after first publish. The taxonomy is versioned in `scripts/lib/seo.mjs`, and `scripts/import-youtube.mjs` regenerates SEO/topic data when the taxonomy version changes.
+- Current improved taxonomy groups videos by tool/workflow areas such as OpenAI/ChatGPT, Google Gemini, Claude, AI Agents, coding, design/images, research/study, documents, news/comparisons, Chinese/open models, Perplexity, prompts, productivity, and video generation.
+- GitHub connector can see existing `hebaaabdelgayed` repositories, but the available connector tools did not expose repo creation during implementation.
 - This file is project memory for future Codex chats; it does not replace a public `README.md`.
 
 ## Safety

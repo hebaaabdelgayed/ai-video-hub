@@ -4,9 +4,10 @@ import { dirname, join } from 'node:path';
 const config = JSON.parse(readFileSync('src/site.config.json', 'utf8'));
 const styles = readFileSync('src/styles.css', 'utf8');
 const outDir = 'dist';
+const baseUrl = config.baseUrl.replace(/\/+$/, '');
 
 function route(path) {
-  return `${config.baseUrl}${path}`;
+  return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
 }
 
 function escapeHtml(value = '') {
@@ -29,11 +30,16 @@ function allHtmlFiles(dir) {
 }
 
 function footerLinks() {
+  const socialLinks = [
+    config.facebookUrl ? `<a href="${escapeHtml(config.facebookUrl)}">Facebook</a>` : '',
+    config.linkedinUrl ? `<a href="${escapeHtml(config.linkedinUrl)}">LinkedIn</a>` : ''
+  ].filter(Boolean).join('\n    ');
   return `<nav class="footer-links" aria-label="روابط الموقع">
     <a href="${route('/about/')}">من نحن</a>
     <a href="${route('/contact/')}">تواصل</a>
     <a href="${route('/privacy/')}">سياسة الخصوصية</a>
     <a href="${route('/terms/')}">شروط الاستخدام</a>
+    ${socialLinks}
   </nav>`;
 }
 
@@ -95,6 +101,8 @@ page('contact', `تواصل | ${config.arabicName}`, 'طرق التواصل مع
   <div class="panel">
     <h2>قناة يوتيوب</h2>
     <p><a href="${escapeHtml(config.channelUrl)}">زيارة قناة هبة أحمد على يوتيوب</a></p>
+    ${config.facebookUrl ? `<h2>Facebook</h2><p><a href="${escapeHtml(config.facebookUrl)}">Facebook</a></p>` : ''}
+    ${config.linkedinUrl ? `<h2>LinkedIn</h2><p><a href="${escapeHtml(config.linkedinUrl)}">LinkedIn</a></p>` : ''}
     <h2>GitHub</h2>
     <p><a href="https://github.com/hebaaabdelgayed">زيارة حساب GitHub</a></p>
   </div>`);

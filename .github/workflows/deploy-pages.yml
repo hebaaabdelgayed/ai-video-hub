@@ -30,28 +30,17 @@ jobs:
       - name: Build
         run: node scripts/build.mjs
 
-      - name: Add trust pages
-        run: node scripts/postbuild-trust-pages.mjs
-
-      - name: Apply SEO pilot
-        run: node scripts/postbuild-seo-pilot.mjs
-
-      - name: Apply video SEO enhancements
-        run: node scripts/postbuild-video-seo.mjs
-
       - name: Add article posts
         run: node scripts/postbuild-posts.mjs
 
       - name: Add social article posts
         run: node scripts/postbuild-social-posts.mjs
 
-      - name: Add custom domain file
-        run: printf "hebaahmedai.cloud\n" > dist/CNAME
+      - name: Add trust pages
+        run: node scripts/postbuild-trust-pages.mjs
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
