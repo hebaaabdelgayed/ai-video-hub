@@ -38,7 +38,7 @@ await new Promise((resolveListen) => server.listen(0, host, resolveListen));
 const port = server.address().port;
 
 try {
-  for (const path of ['/', '/videos/', '/playlists/', '/topics/', '/posts/', '/posts/ai-iq-human-scale/', '/sitemap.xml', '/robots.txt']) {
+  for (const path of ['/', '/videos/', '/playlists/', '/topics/', '/topics/openai-chatgpt/', '/posts/', '/posts/ai-iq-human-scale/', '/posts/how-to-choose-ai-model/', '/sitemap.xml', '/video-sitemap.xml', '/robots.txt']) {
     const response = await fetch(`http://${host}:${port}${path}`);
     if (!response.ok) throw new Error(`${path} returned ${response.status}`);
     const text = await response.text();
@@ -47,6 +47,12 @@ try {
     }
     if (path === '/posts/ai-iq-human-scale/' && !text.includes('social-assets/ai-iq-linkedin-card.jpg') && !text.includes('media/ai-iq-infographic.svg')) {
       throw new Error(`${path} does not include the social infographic`);
+    }
+    if (path === '/topics/openai-chatgpt/' && !text.includes('ابدأ من هنا')) {
+      throw new Error(`${path} does not include topic guidance content`);
+    }
+    if (path === '/video-sitemap.xml' && !text.includes('<video:video>')) {
+      throw new Error(`${path} does not include video sitemap entries`);
     }
   }
   const imageResponse = await fetch(`http://${host}:${port}/social-assets/ai-iq-linkedin-card.jpg`);

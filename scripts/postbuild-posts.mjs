@@ -6,7 +6,10 @@ const basePosts = JSON.parse(readFileSync('data/posts.json', 'utf8'));
 const socialPosts = existsSync('data/social-posts.json')
   ? JSON.parse(readFileSync('data/social-posts.json', 'utf8'))
   : [];
-const posts = uniquePosts([...socialPosts, ...basePosts]);
+const evergreenPosts = existsSync('data/evergreen-posts.json')
+  ? JSON.parse(readFileSync('data/evergreen-posts.json', 'utf8'))
+  : [];
+const posts = uniquePosts([...socialPosts, ...evergreenPosts, ...basePosts]);
 const videosData = JSON.parse(readFileSync('data/videos.json', 'utf8'));
 const styles = readFileSync('src/styles.css', 'utf8');
 const outDir = 'dist';

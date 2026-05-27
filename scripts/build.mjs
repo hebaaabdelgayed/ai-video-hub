@@ -3,6 +3,9 @@ import { dirname, join, relative } from 'node:path';
 
 const config = JSON.parse(readFileSync('src/site.config.json', 'utf8'));
 const data = JSON.parse(readFileSync('data/videos.json', 'utf8'));
+const topicContent = existsSync('data/topic-content.json')
+  ? JSON.parse(readFileSync('data/topic-content.json', 'utf8'))
+  : {};
 const styles = readFileSync('src/styles.css', 'utf8');
 const baseUrl = config.baseUrl.replace(/\/+$/, '');
 
@@ -60,6 +63,77 @@ function sitemapLoc(path) {
   return escapeHtml(encodeURI(route(path)));
 }
 
+function sameAsLinks() {
+  return [
+    config.channelUrl,
+    config.facebookUrl,
+    config.linkedinUrl,
+    'https://github.com/hebaaabdelgayed'
+  ].filter(Boolean);
+}
+
+function stripContext(item) {
+  if (!item || typeof item !== 'object') return item;
+  const { '@context': _context, ...rest } = item;
+  return rest;
+}
+
+function asArray(value) {
+  if (!value) return [];
+  return Array.isArray(value) ? value : [value];
+}
+
+function structuredData(path, extra = []) {
+  const canonical = route(path);
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': `${baseUrl}/#organization`,
+        name: config.arabicName,
+        url: baseUrl,
+        sameAs: sameAsLinks()
+      },
+      {
+        '@type': 'Person',
+        '@id': `${baseUrl}/#person`,
+        name: 'هبة أحمد',
+        url: baseUrl,
+        sameAs: sameAsLinks(),
+        worksFor: { '@id': `${baseUrl}/#organization` }
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${canonical}#webpage`,
+        url: canonical,
+        inLanguage: config.language,
+        isPartOf: {
+          '@type': 'WebSite',
+          '@id': `${baseUrl}/#website`,
+          name: config.arabicName,
+          url: baseUrl,
+          publisher: { '@id': `${baseUrl}/#organization` }
+        },
+        publisher: { '@id': `${baseUrl}/#organization` }
+      },
+      ...asArray(extra).map(stripContext)
+    ]
+  };
+}
+
+function breadcrumbs(items) {
+  return {
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: route(item.path)
+    }))
+  };
+}
+
 function writePage(path, html) {
   const file = join(outDir, path, 'index.html');
   mkdirSync(dirname(file), { recursive: true });
@@ -82,6 +156,7 @@ function footerLinks() {
 
 function layout({ title, description, path = '/', body, jsonLd }) {
   const canonical = route(path);
+  const pageJsonLd = structuredData(path, jsonLd);
   return `<!doctype html>
 <html lang="${config.language}" dir="${config.direction}">
 <head>
@@ -95,7 +170,7 @@ function layout({ title, description, path = '/', body, jsonLd }) {
   <meta property="og:type" content="website">
   <meta property="og:url" content="${canonical}">
   <style>${styles}</style>
-  ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
+  <script type="application/ld+json">${JSON.stringify(pageJsonLd)}</script>
 </head>
 <body>
   <header class="site-header">
@@ -105,6 +180,7 @@ function layout({ title, description, path = '/', body, jsonLd }) {
         <a href="${route('/videos/')}">الفيديوهات</a>
         <a href="${route('/playlists/')}">القوائم</a>
         <a href="${route('/topics/')}">المواضيع</a>
+        <a href="${route('/posts/')}">المقالات</a>
         <a href="${escapeHtml(config.channelUrl)}">يوتيوب</a>
       </div>
     </nav>
@@ -165,6 +241,41 @@ function compactVideoList(videos) {
     <a href="${route(`/videos/${video.seo.slug}/`)}">${escapeHtml(video.title)}</a>
     <span>${formatDate(video.publishedAt)}</span>
   </li>`).join('')}</ul>`;
+}
+
+function topicDetails(slug) {
+  return topicContent[slug] || {};
+}
+
+function topicExcerpt(topic) {
+  const firstIntro = topicDetails(topic.slug).intro?.[0];
+  return firstIntro || `فيديوهات عربية عملية عن ${topic.name} من قناة هبة أحمد.`;
+}
+
+function renderTopicIntro(topic) {
+  const details = topicDetails(topic.slug);
+  const intro = details.intro?.length
+    ? details.intro
+    : [`هذا القسم يجمع فيديوهات ${topic.name} في مكان واحد حتى تبدأ من الشرح المناسب بدل البحث العشوائي داخل يوتيوب.`];
+  const startHere = details.startHere || [];
+  return `<section class="panel topic-intro">
+    ${intro.map((paragraph, index) => index === 0 ? `<p class="lead">${escapeHtml(paragraph)}</p>` : `<p>${escapeHtml(paragraph)}</p>`).join('')}
+    ${startHere.length ? `<h2>ابدأ من هنا</h2><ul>${startHere.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}
+  </section>`;
+}
+
+function videoSitemapEntry(video) {
+  const pagePath = `/videos/${video.seo.slug}/`;
+  return `  <url>
+    <loc>${sitemapLoc(pagePath)}</loc>
+    <video:video>
+      ${video.thumbnail ? `<video:thumbnail_loc>${escapeHtml(video.thumbnail)}</video:thumbnail_loc>` : ''}
+      <video:title>${escapeHtml(video.title)}</video:title>
+      <video:description>${escapeHtml(video.seo.metaDescription || video.seo.summary || video.title)}</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/${escapeHtml(video.id)}</video:player_loc>
+      ${video.publishedAt ? `<video:publication_date>${escapeHtml(video.publishedAt)}</video:publication_date>` : ''}
+    </video:video>
+  </url>`;
 }
 
 function learningPathCard(topicSlug, title, text) {
@@ -252,7 +363,7 @@ writePage('topics', layout({
   title: `المواضيع | ${config.arabicName}`,
   description: 'مواضيع الذكاء الاصطناعي الموجودة في مكتبة فيديوهات هبة أحمد.',
   path: '/topics/',
-  body: `<main class="section"><h1 class="page-title">المواضيع</h1><p class="lead">تم تنظيم الفيديوهات حسب الأدوات والاستخدامات الفعلية بدل التصنيف العام فقط.</p><div class="grid">${data.topics.map((topic) => `<a class="topic-card card-body" href="${route(`/topics/${topic.slug}/`)}"><h3>${escapeHtml(topic.name)}</h3><p class="meta">${topic.count.toLocaleString('ar')} فيديو</p></a>`).join('')}</div></main>`
+  body: `<main class="section"><h1 class="page-title">المواضيع</h1><p class="lead">تم تنظيم الفيديوهات حسب الأدوات والاستخدامات الفعلية بدل التصنيف العام فقط.</p><div class="grid">${data.topics.map((topic) => `<a class="topic-card card-body" href="${route(`/topics/${topic.slug}/`)}"><h3>${escapeHtml(topic.name)}</h3><p>${escapeHtml(topicExcerpt(topic))}</p><p class="meta">${topic.count.toLocaleString('ar')} فيديو</p></a>`).join('')}</div></main>`
 }));
 
 writePage('about', layout({
@@ -340,9 +451,29 @@ for (const topic of data.topics) {
   const videos = data.videos.filter((video) => video.seo?.topics?.some((item) => item.slug === topic.slug));
   writePage(`topics/${topic.slug}`, layout({
     title: `${topic.name} | ${config.arabicName}`,
-    description: `فيديوهات عربية عن ${topic.name} من قناة هبة أحمد.`,
+    description: topicExcerpt(topic),
     path: `/topics/${topic.slug}/`,
-    body: `<main class="section"><h1 class="page-title">${escapeHtml(topic.name)}</h1><div class="grid">${videos.map(videoCard).join('')}</div></main>`
+    jsonLd: [
+      {
+        '@type': 'CollectionPage',
+        name: `${topic.name} | ${config.arabicName}`,
+        description: topicExcerpt(topic),
+        url: route(`/topics/${topic.slug}/`),
+        mainEntity: videos.slice(0, 12).map((video) => ({
+          '@type': 'VideoObject',
+          name: video.title,
+          url: route(`/videos/${video.seo.slug}/`),
+          thumbnailUrl: video.thumbnail ? [video.thumbnail] : [],
+          uploadDate: video.publishedAt
+        }))
+      },
+      breadcrumbs([
+        { name: 'الرئيسية', path: '/' },
+        { name: 'المواضيع', path: '/topics/' },
+        { name: topic.name, path: `/topics/${topic.slug}/` }
+      ])
+    ],
+    body: `<main class="section"><h1 class="page-title">${escapeHtml(topic.name)}</h1>${renderTopicIntro(topic)}<div class="grid">${videos.map(videoCard).join('')}</div></main>`
   }));
 }
 
@@ -355,17 +486,36 @@ for (const video of data.videos) {
     title: video.seo.title,
     description: video.seo.metaDescription,
     path,
-    jsonLd: {
-      '@context': 'https://schema.org',
-      '@type': 'VideoObject',
-      name: video.title,
-      description: video.seo.metaDescription,
-      thumbnailUrl: video.thumbnail ? [video.thumbnail] : [],
-      uploadDate: video.publishedAt,
-      duration: video.duration,
-      embedUrl: `https://www.youtube.com/embed/${video.id}`,
-      url: video.youtubeUrl
-    },
+    jsonLd: [
+      {
+        '@type': 'VideoObject',
+        name: video.title,
+        description: video.seo.metaDescription,
+        thumbnailUrl: video.thumbnail ? [video.thumbnail] : [],
+        uploadDate: video.publishedAt,
+        duration: video.duration,
+        embedUrl: `https://www.youtube.com/embed/${video.id}`,
+        contentUrl: video.youtubeUrl,
+        url: route(path),
+        publisher: { '@id': `${baseUrl}/#organization` }
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: video.seo.faq.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer
+          }
+        }))
+      },
+      breadcrumbs([
+        { name: 'الرئيسية', path: '/' },
+        { name: 'الفيديوهات', path: '/videos/' },
+        { name: video.title, path }
+      ])
+    ],
     body: `<main class="video-layout">
       <article>
         <iframe class="video-frame" src="https://www.youtube.com/embed/${video.id}" title="${escapeHtml(video.title)}" allowfullscreen></iframe>
@@ -406,9 +556,16 @@ ${urls.map((url) => `  <url><loc>${sitemapLoc(url)}</loc></url>`).join('\n')}
 </urlset>
 `);
 
+writeFileSync(join(outDir, 'video-sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+${data.videos.map(videoSitemapEntry).join('\n')}
+</urlset>
+`);
+
 writeFileSync(join(outDir, 'robots.txt'), `User-agent: *
 Allow: /
 Sitemap: ${route('/sitemap.xml')}
+Sitemap: ${route('/video-sitemap.xml')}
 `);
 
 const siteHost = new URL(baseUrl).hostname;
