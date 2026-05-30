@@ -55,18 +55,21 @@ async function getChannel() {
 
 async function getPlaylists() {
   const items = await paginate('playlists', {
-    part: 'snippet,contentDetails',
+    part: 'snippet,contentDetails,status',
     channelId: CHANNEL_ID,
     maxResults: 50
   });
-  return items.map((item) => ({
-    id: item.id,
-    title: item.snippet.title,
-    description: item.snippet.description || '',
-    slug: slugify(item.snippet.title, item.id),
-    thumbnail: item.snippet.thumbnails?.high?.url || item.snippet.thumbnails?.default?.url || '',
-    itemCount: item.contentDetails?.itemCount || 0
-  }));
+  return items
+    .filter((item) => item.status?.privacyStatus === 'public')
+    .map((item) => ({
+      id: item.id,
+      title: item.snippet.title,
+      description: item.snippet.description || '',
+      slug: slugify(item.snippet.title, item.id),
+      thumbnail: item.snippet.thumbnails?.high?.url || item.snippet.thumbnails?.default?.url || '',
+      itemCount: item.contentDetails?.itemCount || 0,
+      privacyStatus: item.status?.privacyStatus || 'public'
+    }));
 }
 
 async function getPlaylistVideoIds(playlistId) {
@@ -123,8 +126,10 @@ const uploads = await getPlaylistVideoIds(uploadPlaylistId);
 
 const playlistIdsByVideo = new Map();
 const playlistNamesByVideo = new Map();
+const playlistVideoIds = new Map();
 for (const playlist of playlists) {
   const ids = await getPlaylistVideoIds(playlist.id);
+  playlistVideoIds.set(playlist.id, ids);
   for (const videoId of ids) {
     playlistIdsByVideo.set(videoId, [...(playlistIdsByVideo.get(videoId) || []), playlist.id]);
     playlistNamesByVideo.set(videoId, [...(playlistNamesByVideo.get(videoId) || []), playlist.title]);
@@ -149,7 +154,10 @@ const data = {
     videoCount: Number(channel.statistics?.videoCount || videos.length),
     viewCount: Number(channel.statistics?.viewCount || 0)
   },
-  playlists,
+  playlists: playlists.map((playlist) => ({
+    ...playlist,
+    videoIds: playlistVideoIds.get(playlist.id) || []
+  })),
   topics: mergeTopics(videos),
   videos
 };

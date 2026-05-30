@@ -220,6 +220,35 @@ function latestVideos(count = 9) {
   return data.videos.slice(0, count).map(videoCard).join('');
 }
 
+const videosById = new Map(data.videos.map((video) => [video.id, video]));
+
+function playlistVideos(playlist) {
+  if (playlist.videoIds?.length) {
+    return playlist.videoIds.map((id) => videosById.get(id)).filter(Boolean);
+  }
+  return data.videos.filter((video) => video.playlists?.includes(playlist.id));
+}
+
+function publicPlaylists() {
+  return data.playlists.filter((playlist) => playlist.privacyStatus !== 'private' && playlist.privacyStatus !== 'unlisted');
+}
+
+function primaryPlaylists() {
+  return publicPlaylists().filter((playlist) => playlist.slug !== 'all-videos' && playlist.itemCount > 0);
+}
+
+function playlistCard(playlist) {
+  const videos = playlistVideos(playlist).slice(0, 3);
+  return `<article class="playlist-card">
+    <div class="playlist-card-main">
+      <h3><a href="${route(`/playlists/${playlist.slug}/`)}">${escapeHtml(playlist.title)}</a></h3>
+      ${playlist.description ? `<p>${escapeHtml(playlist.description)}</p>` : ''}
+      <p class="meta">${playlist.itemCount.toLocaleString('ar')} فيديو</p>
+    </div>
+    ${compactVideoList(videos)}
+  </article>`;
+}
+
 function videosForTopic(slug, count = 3) {
   return data.videos
     .filter((video) => video.seo?.topics?.some((topic) => topic.slug === slug))
@@ -303,16 +332,21 @@ writePage('', layout({
         <h1>كل شروحات الذكاء الاصطناعي من هبة أحمد في مكان واحد</h1>
         <p class="lead">تصفح فيديوهات القناة حسب الأداة أو الهدف: ChatGPT، Gemini، Claude، AI Agents، البرمجة، التصميم، الدراسة، والأتمتة. الهدف أن تصل للفيديو المناسب بسرعة بدل البحث داخل يوتيوب فقط.</p>
         <div class="hero-actions">
-          <a class="button" href="${route('/topics/')}">ابدأ من المواضيع</a>
+          <a class="button" href="${route('/playlists/')}">قوائم التشغيل</a>
           <a class="button secondary" href="${route('/videos/')}">كل الفيديوهات</a>
+          <a class="button secondary" href="${route('/topics/')}">المواضيع</a>
           <a class="button secondary" href="${escapeHtml(config.channelUrl)}">قناة يوتيوب</a>
         </div>
       </div>
       <div class="stats" aria-label="إحصاءات القناة">
         <div class="stat"><strong>${data.videos.length.toLocaleString('ar')}</strong><span>فيديو منظم</span></div>
-        <div class="stat"><strong>${data.playlists.length.toLocaleString('ar')}</strong><span>قائمة تشغيل</span></div>
+        <div class="stat"><strong>${publicPlaylists().length.toLocaleString('ar')}</strong><span>قائمة تشغيل عامة</span></div>
         <div class="stat"><strong>${data.topics.length.toLocaleString('ar')}</strong><span>موضوع AI</span></div>
       </div>
+    </section>
+    <section class="section">
+      ${sectionHeader('قوائم التشغيل على YouTube', 'تصفح الفيديوهات بنفس تنظيم قوائم التشغيل الموجودة على القناة، مع الحفاظ على ترتيب كل قائمة كما هو في YouTube.', route('/playlists/'), 'كل قوائم التشغيل')}
+      <div class="path-grid">${primaryPlaylists().slice(0, 6).map(playlistCard).join('')}</div>
     </section>
     <section class="section topic-band">
       ${sectionHeader('اختار المسار المناسب لك', 'ابدأ من طريقة استخدامك للذكاء الاصطناعي، ثم انتقل للفيديوهات المرتبطة بهذا الهدف.', route('/topics/'), 'كل المواضيع')}
@@ -349,14 +383,30 @@ writePage('videos', layout({
   title: `كل الفيديوهات | ${config.arabicName}`,
   description: 'تصفح كل فيديوهات هبة أحمد عن الذكاء الاصطناعي والأدوات والشروحات العملية.',
   path: '/videos/',
-  body: `<main class="section"><h1 class="page-title">كل الفيديوهات</h1><div class="grid">${data.videos.map(videoCard).join('')}</div></main>`
+  body: `<main>
+    <section class="section">
+      <h1 class="page-title">كل الفيديوهات</h1>
+      <p class="lead">الفيديوهات مرتبة هنا حسب قوائم التشغيل الموجودة على قناة YouTube، حتى يكون التنقل بين السلاسل والموضوعات أسهل.</p>
+    </section>
+    ${primaryPlaylists().map((playlist) => {
+      const videos = playlistVideos(playlist);
+      return `<section class="section playlist-section">
+        ${sectionHeader(playlist.title, playlist.description || `${videos.length.toLocaleString('ar')} فيديو في هذه القائمة.`, route(`/playlists/${playlist.slug}/`), 'فتح القائمة')}
+        <div class="grid">${videos.slice(0, 8).map(videoCard).join('')}</div>
+      </section>`;
+    }).join('')}
+  </main>`
 }));
 
 writePage('playlists', layout({
   title: `قوائم التشغيل | ${config.arabicName}`,
   description: 'قوائم تشغيل منظمة لفيديوهات الذكاء الاصطناعي.',
   path: '/playlists/',
-  body: `<main class="section"><h1 class="page-title">قوائم التشغيل</h1><div class="grid">${data.playlists.map((playlist) => `<a class="topic-card card-body" href="${route(`/playlists/${playlist.slug}/`)}"><h3>${escapeHtml(playlist.title)}</h3><p class="meta">${playlist.itemCount.toLocaleString('ar')} فيديو</p></a>`).join('')}</div></main>`
+  body: `<main class="section">
+    <h1 class="page-title">قوائم التشغيل</h1>
+    <p class="lead">هذه الصفحة تعكس قوائم التشغيل الموجودة على قناة YouTube، وكل قائمة تعرض فيديوهاتها بترتيب القائمة نفسه.</p>
+    <div class="path-grid">${publicPlaylists().map(playlistCard).join('')}</div>
+  </main>`
 }));
 
 writePage('topics', layout({
@@ -437,8 +487,8 @@ writePage('terms', layout({
   </main>`
 }));
 
-for (const playlist of data.playlists) {
-  const videos = data.videos.filter((video) => video.playlists?.includes(playlist.id));
+for (const playlist of publicPlaylists()) {
+  const videos = playlistVideos(playlist);
   writePage(`playlists/${playlist.slug}`, layout({
     title: `${playlist.title} | ${config.arabicName}`,
     description: playlist.description || `فيديوهات ${playlist.title} من قناة هبة أحمد.`,
@@ -547,7 +597,7 @@ for (const video of data.videos) {
 
 const urls = ['/', '/videos/', '/playlists/', '/topics/', '/about/', '/contact/', '/privacy/', '/terms/']
   .concat(data.videos.map((video) => `/videos/${video.seo.slug}/`))
-  .concat(data.playlists.map((playlist) => `/playlists/${playlist.slug}/`))
+  .concat(publicPlaylists().map((playlist) => `/playlists/${playlist.slug}/`))
   .concat(data.topics.map((topic) => `/topics/${topic.slug}/`));
 
 writeFileSync(join(outDir, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>

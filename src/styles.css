@@ -190,7 +190,8 @@ a:hover {
   gap: 16px;
 }
 
-.path-card {
+.path-card,
+.playlist-card {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -200,13 +201,15 @@ a:hover {
   gap: 14px;
 }
 
-.path-card h3 {
+.path-card h3,
+.playlist-card h3 {
   margin: 0 0 8px;
   color: var(--ink);
   font-size: 1.18rem;
 }
 
-.path-card p {
+.path-card p,
+.playlist-card p {
   margin: 0;
   color: var(--muted);
 }
