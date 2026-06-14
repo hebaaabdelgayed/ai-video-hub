@@ -1,14 +1,14 @@
 {
   "sourceChannelId": "UCMvdDpKRU_-ZmSz9F1lKOVA",
-  "lastImportedAt": "2026-06-13T07:07:35.256Z",
+  "lastImportedAt": "2026-06-14T07:58:02.456Z",
   "channel": {
     "title": "Heba Ahmed - هبة احمد",
     "description": "مرحبا بكم فى قناتى 🌟 في هذه القناة، نستكشف معًا عالم التكنولوجيا واستخدام الذكاء الاصطناعي في مجالات عديدة تركز على البحث العلمي، التصميم، وملاحظات طب الجلد. انضموا إلينا لتجربة رائعة من الاكتشاف والتعلم!\n\n🔍 موضوعات قناتنا تشمل:\n- كيفية استخدام الذكاء الاصطناعي في البحث العلمي 📚🔬\n- تصميم مبتكر باستخدام التكنولوجيا الحديثة 💡🖥️\n- مفاهيم طب الجلد وكيف يمكن للذكاء الاصطناعي دعم العمليات الطبية في هذا المجال 🩹💻\n\nاشتركوا الآن لتكونوا جزءًا من مجتمعنا المتنوع، وتعلموا كيف يمكن للتكنولوجيا تحويل عمليات البحث والتصميم ومجال طب الجلد!\n\n#الذكاءالاصطناعي #البحث العلمي #التصميم الحديث #طب الجلد #التكنولوجيافي العلوم #علم البيانات #قناةاليوتيوب #تعلموا_معنا\n",
     "url": "https://www.youtube.com/channel/UCMvdDpKRU_-ZmSz9F1lKOVA",
     "thumbnail": "https://yt3.ggpht.com/EjZlhavTklp9tTVhWbwlL0yjHaDcfagtmCpN-yuH3sZ1HWw01gbEbdAEo0mXgPFonFQW_B_dhVU=s800-c-k-c0x00ffffff-no-rj",
     "subscriberCount": 52600,
-    "videoCount": 220,
-    "viewCount": 2485196
+    "videoCount": 221,
+    "viewCount": 2497519
   },
   "playlists": [
     {
@@ -309,10 +309,11 @@
       "title": "AI News",
       "description": "اخر اخبار الذكاء الاصطناعي",
       "slug": "ai-news",
-      "thumbnail": "https://i.ytimg.com/vi/62KZoCYqV5o/hqdefault.jpg",
-      "itemCount": 97,
+      "thumbnail": "https://i.ytimg.com/vi/XHH9yKyOy1M/hqdefault.jpg",
+      "itemCount": 98,
       "privacyStatus": "public",
       "videoIds": [
+        "XHH9yKyOy1M",
         "62KZoCYqV5o",
         "aGWpoD5Kz7c",
         "99rn1Bt9Ttk",
@@ -429,10 +430,11 @@
       "title": "Claude models",
       "description": "",
       "slug": "claude-models",
-      "thumbnail": "https://i.ytimg.com/vi/62KZoCYqV5o/hqdefault.jpg",
-      "itemCount": 22,
+      "thumbnail": "https://i.ytimg.com/vi/XHH9yKyOy1M/hqdefault.jpg",
+      "itemCount": 23,
       "privacyStatus": "public",
       "videoIds": [
+        "XHH9yKyOy1M",
         "62KZoCYqV5o",
         "aGWpoD5Kz7c",
         "n3l2zu7s2XE",
@@ -639,7 +641,7 @@
       "description": "",
       "slug": "all-videos",
       "thumbnail": "https://i.ytimg.com/vi/zX3WeIlkHFc/hqdefault.jpg",
-      "itemCount": 207,
+      "itemCount": 208,
       "privacyStatus": "public",
       "videoIds": [
         "zX3WeIlkHFc",
@@ -848,7 +850,8 @@
         "Y_Gn_leu08o",
         "99rn1Bt9Ttk",
         "aGWpoD5Kz7c",
-        "62KZoCYqV5o"
+        "62KZoCYqV5o",
+        "XHH9yKyOy1M"
       ]
     },
     {
@@ -957,12 +960,12 @@
     {
       "slug": "ai-news-comparisons",
       "name": "أخبار ومقارنات نماذج AI",
-      "count": 100
+      "count": 101
     },
     {
       "slug": "openai-chatgpt",
       "name": "OpenAI و ChatGPT",
-      "count": 68
+      "count": 69
     },
     {
       "slug": "productivity-ai-tools",
@@ -992,7 +995,7 @@
     {
       "slug": "claude-anthropic",
       "name": "Claude و Anthropic",
-      "count": 32
+      "count": 33
     },
     {
       "slug": "presentations-documents",
@@ -1026,6 +1029,99 @@
     }
   ],
   "videos": [
+    {
+      "id": "XHH9yKyOy1M",
+      "title": "إيقاف Mythos 5 رسميًا..ايه الي حصل؟!",
+      "description": "#ai #chatgpt5.5  #gpt5 #chatgpt5.2 #opensourceai  #chatgptagent #openai #aiagents #codex \n\nقرار صادم في عالم الذكاء الاصطناعي!\nشركة Anthropic أعلنت إيقاف الوصول إلى Claude Mythos 5 و Fable 5 بعد توجيه من الحكومة الأمريكية مرتبط بمخاوف الأمن القومي وضوابط التصدير، والقرار ممكن يغيّر شكل المنافسة بين أقوى نماذج الذكاء الاصطناعي الفترة الجاية.\n\nفي الفيديو ده هنتكلم عن:\nهل Mythos 5 كان خطير فعلًا؟\nليه الحكومة الأمريكية تدخلت؟\nإيه تأثير القرار على المستخدمين والمطورين؟\nوهل دي بداية مرحلة جديدة من السيطرة على نماذج الذكاء الاصطناعي؟\n\nلو بتتابع أخبار AI وClaude وAnthropic وOpenAI وGemini، الفيديو ده مهم جدًا ليك.\n\nاكتبلي في التعليقات:\nهل شايف إن إيقاف Mythos 5 قرار ضروري للحماية؟\nولا بداية رقابة خطيرة على الذكاء الاصطناعي؟\n\nمتنساش تعمل لايك وتشترك في القناة عشان يوصلك كل جديد في عالم الذكاء الاصطناعي.\n\n#الذكاء_الاصطناعي\n#Claude\n#Anthropic\n#Mythos5\n#أخبار_AI\n#AI\n#ArtificialIntelligence\n\n\n#chatgpt\n#gpt5\n#gpt54\n#الذكاء_الاصطناعي\n#chatgpt_شرح\n#ai_tools\n#gemini\n#gemini_pro\n#تقنيات_الذكاء_الاصطناعي\n\nلينك الخبر\nhttps://www.anthropic.com/news/fable-mythos-access\n\n\n\nفيديو شرح Mythos 5\nhttps://youtu.be/62KZoCYqV5o\nhttps://youtu.be/aGWpoD5Kz7c\n\nلا تنسوا الاشتراك في صفحتنا على الفيسبوك في مجتمع الذكاء الاصطناعي لمتابعة كل جديد ❤️\nhttps://www.facebook.com/profile.php?id=61565462709247",
+      "publishedAt": "2026-06-13T12:41:22Z",
+      "thumbnail": "https://i.ytimg.com/vi/XHH9yKyOy1M/maxresdefault.jpg",
+      "channelTitle": "Heba Ahmed - هبة احمد",
+      "tags": [
+        "Mythos 5",
+        "Claude Mythos 5",
+        "إيقاف Mythos 5",
+        "Anthropic",
+        "Claude AI",
+        "Fable 5",
+        "Claude Fable 5",
+        "الذكاء الاصطناعي",
+        "أخبار الذكاء الاصطناعي",
+        "أخبار AI",
+        "AI News",
+        "الحكومة الأمريكية",
+        "قرار حكومي AI",
+        "حظر الذكاء الاصطناعي",
+        "US government AI",
+        "AI export controls",
+        "AI regulation",
+        "national security AI",
+        "نماذج الذكاء الاصطناعي",
+        "Frontier AI",
+        "AI safety",
+        "OpenAI",
+        "ChatGPT",
+        "Gemini",
+        "هبة احمد",
+        "heba ahmed"
+      ],
+      "duration": "PT5M21S",
+      "viewCount": 6892,
+      "likeCount": 314,
+      "commentCount": 45,
+      "playlists": [
+        "PLAjRyApRE2exZyEfvQUzVA8xLDj38OLgH",
+        "PLAjRyApRE2ewr1tjAExZHqcWIyxPtzw0P",
+        "PLAjRyApRE2ewn2lUtCYOMSFcCuDP00pYs"
+      ],
+      "youtubeUrl": "https://www.youtube.com/watch?v=XHH9yKyOy1M",
+      "seo": {
+        "taxonomyVersion": 4,
+        "title": "إيقاف Mythos 5 رسميًا..ايه الي حصل؟! | شرح عربي للذكاء الاصطناعي",
+        "slug": "إيقاف-mythos-5-رسميا-ايه-الي-حصل-XHH9yKyOy1M",
+        "metaDescription": "#ai #chatgpt5.5 #gpt5 #chatgpt5.2 #opensourceai #chatgptagent #openai #aiagents #codex قرار صادم في عالم الذكاء الاصطناعي! شركة Anthropic أعلنت إيقاف الوصو",
+        "summary": "#ai #chatgpt5.5 #gpt5 #chatgpt5.2 #opensourceai #chatgptagent #openai #aiagents #codex قرار صادم في عالم الذكاء الاصطناعي! شركة Anthropic أعلنت إيقاف الوصول إلى Claude Mythos 5 و Fable 5 بعد توجيه من الحكومة الأمريكية مر",
+        "keywords": [
+          "الذكاء الاصطناعي",
+          "AI",
+          "أدوات AI",
+          "شرح أدوات الذكاء الاصطناعي",
+          "هبة أحمد",
+          "أخبار ومقارنات نماذج AI",
+          "Claude و Anthropic",
+          "OpenAI و ChatGPT",
+          "AI News",
+          "Claude models",
+          "All videos",
+          "Mythos 5",
+          "Claude Mythos 5",
+          "إيقاف Mythos 5"
+        ],
+        "topics": [
+          {
+            "slug": "ai-news-comparisons",
+            "name": "أخبار ومقارنات نماذج AI"
+          },
+          {
+            "slug": "claude-anthropic",
+            "name": "Claude و Anthropic"
+          },
+          {
+            "slug": "openai-chatgpt",
+            "name": "OpenAI و ChatGPT"
+          }
+        ],
+        "faq": [
+          {
+            "question": "ما موضوع فيديو إيقاف Mythos 5 رسميًا..ايه الي حصل؟!؟",
+            "answer": "الفيديو يشرح إيقاف Mythos 5 رسميًا..ايه الي حصل؟! بطريقة عربية عملية ويرتبط بموضوعات أخبار ومقارنات نماذج AI، Claude و Anthropic، OpenAI و ChatGPT."
+          },
+          {
+            "question": "هل يمكن مشاهدة الشرح من الموقع؟",
+            "answer": "نعم، يمكنك مشاهدة الفيديو مباشرة من الصفحة أو فتحه على قناة هبة أحمد في يوتيوب."
+          }
+        ]
+      }
+    },
     {
       "id": "62KZoCYqV5o",
       "title": "Mythos 5 ضد GPT-5.5: نفس التطبيق والنتيجة فاجأتني",
@@ -1069,9 +1165,9 @@
         "heba ahmed"
       ],
       "duration": "PT16M26S",
-      "viewCount": 2854,
-      "likeCount": 182,
-      "commentCount": 32,
+      "viewCount": 4439,
+      "likeCount": 249,
+      "commentCount": 39,
       "playlists": [
         "PLAjRyApRE2exZyEfvQUzVA8xLDj38OLgH",
         "PLAjRyApRE2ewr1tjAExZHqcWIyxPtzw0P",
@@ -1172,7 +1268,7 @@
         "Gemini"
       ],
       "duration": "PT8M1S",
-      "viewCount": 6142,
+      "viewCount": 6242,
       "likeCount": 290,
       "commentCount": 66,
       "playlists": [
@@ -1271,8 +1367,8 @@
         "heba ahmed"
       ],
       "duration": "PT14M1S",
-      "viewCount": 4761,
-      "likeCount": 247,
+      "viewCount": 4797,
+      "likeCount": 249,
       "commentCount": 44,
       "playlists": [
         "PLAjRyApRE2exZyEfvQUzVA8xLDj38OLgH",
@@ -1371,8 +1467,8 @@
         "heba ahmed"
       ],
       "duration": "PT8M4S",
-      "viewCount": 3595,
-      "likeCount": 197,
+      "viewCount": 3611,
+      "likeCount": 199,
       "commentCount": 16,
       "playlists": [
         "PLAjRyApRE2exZyEfvQUzVA8xLDj38OLgH",
@@ -1471,8 +1567,8 @@
         "computer control"
       ],
       "duration": "PT12M20S",
-      "viewCount": 4424,
-      "likeCount": 259,
+      "viewCount": 4485,
+      "likeCount": 262,
       "commentCount": 40,
       "playlists": [
         "PLAjRyApRE2exZyEfvQUzVA8xLDj38OLgH",
@@ -1569,7 +1665,7 @@
         "هبة احمد"
       ],
       "duration": "PT12M20S",
-      "viewCount": 4771,
+      "viewCount": 4781,
       "likeCount": 214,
       "commentCount": 41,
       "playlists": [
@@ -1663,8 +1759,8 @@
         "heba ahmed"
       ],
       "duration": "PT9M48S",
-      "viewCount": 3135,
-      "likeCount": 179,
+      "viewCount": 3146,
+      "likeCount": 181,
       "commentCount": 18,
       "playlists": [
         "PLAjRyApRE2exZyEfvQUzVA8xLDj38OLgH",
@@ -1760,8 +1856,8 @@
         "هبة احمد"
       ],
       "duration": "PT22M8S",
-      "viewCount": 12998,
-      "likeCount": 634,
+      "viewCount": 13068,
+      "likeCount": 635,
       "commentCount": 94,
       "playlists": [
         "PLAjRyApRE2ew4-sS0Gm1aLyhzHORP9621",
@@ -1852,8 +1948,8 @@
         "أخبار الذكاء الاصطناعي"
       ],
       "duration": "PT14M41S",
-      "viewCount": 6882,
-      "likeCount": 316,
+      "viewCount": 6912,
+      "likeCount": 318,
       "commentCount": 59,
       "playlists": [
         "PLAjRyApRE2exZyEfvQUzVA8xLDj38OLgH",
@@ -1952,8 +2048,8 @@
         "ربط chatgpt بالتطبيقات"
       ],
       "duration": "PT10M3S",
-      "viewCount": 5444,
-      "likeCount": 381,
+      "viewCount": 5457,
+      "likeCount": 382,
       "commentCount": 29,
       "playlists": [
         "PLAjRyApRE2exZyEfvQUzVA8xLDj38OLgH",
@@ -2047,7 +2143,7 @@
         "انشاء جداول في notebooklm"
       ],
       "duration": "PT10M51S",
-      "viewCount": 11099,
+      "viewCount": 11120,
       "likeCount": 510,
       "commentCount": 61,
       "playlists": [
@@ -2136,8 +2232,8 @@
         "heba ahmed"
       ],
       "duration": "PT17M22S",
-      "viewCount": 12994,
-      "likeCount": 674,
+      "viewCount": 13057,
+      "likeCount": 675,
       "commentCount": 99,
       "playlists": [
         "PLAjRyApRE2exZyEfvQUzVA8xLDj38OLgH",
@@ -2229,7 +2325,7 @@
         "Gemini Sheets"
       ],
       "duration": "PT9M40S",
-      "viewCount": 14626,
+      "viewCount": 14646,
       "likeCount": 823,
       "commentCount": 81,
       "playlists": [
@@ -2322,7 +2418,7 @@
         "heba ahmed"
       ],
       "duration": "PT18M1S",
-      "viewCount": 3259,
+      "viewCount": 3265,
       "likeCount": 308,
       "commentCount": 77,
       "playlists": [],
@@ -2402,7 +2498,7 @@
         "heba ahmed"
       ],
       "duration": "PT14M13S",
-      "viewCount": 13985,
+      "viewCount": 13988,
       "likeCount": 670,
       "commentCount": 73,
       "playlists": [
@@ -2498,8 +2594,8 @@
         "Claude شرح"
       ],
       "duration": "PT10M46S",
-      "viewCount": 9198,
-      "likeCount": 446,
+      "viewCount": 9217,
+      "likeCount": 447,
       "commentCount": 39,
       "playlists": [
         "PLAjRyApRE2exZyEfvQUzVA8xLDj38OLgH",
@@ -2564,7 +2660,7 @@
       "channelTitle": "Heba Ahmed - هبة احمد",
       "tags": [],
       "duration": "PT1M57S",
-      "viewCount": 1651,
+      "viewCount": 1652,
       "likeCount": 79,
       "commentCount": 3,
       "playlists": [],
@@ -2638,7 +2734,7 @@
         "heba ahmed"
       ],
       "duration": "PT13M2S",
-      "viewCount": 10062,
+      "viewCount": 10076,
       "likeCount": 338,
       "commentCount": 15,
       "playlists": [
@@ -2730,7 +2826,7 @@
         "claude cowork use cases"
       ],
       "duration": "PT1M20S",
-      "viewCount": 2100,
+      "viewCount": 2105,
       "likeCount": 80,
       "commentCount": 5,
       "playlists": [
@@ -2817,7 +2913,7 @@
         "claude cowork use cases"
       ],
       "duration": "PT17M1S",
-      "viewCount": 8574,
+      "viewCount": 8599,
       "likeCount": 381,
       "commentCount": 38,
       "playlists": [
@@ -2910,7 +3006,7 @@
         "هبة احمد"
       ],
       "duration": "PT11M56S",
-      "viewCount": 4806,
+      "viewCount": 4814,
       "likeCount": 181,
       "commentCount": 21,
       "playlists": [
@@ -2972,7 +3068,7 @@
       "channelTitle": "Heba Ahmed - هبة احمد",
       "tags": [],
       "duration": "PT1M50S",
-      "viewCount": 1913,
+      "viewCount": 1917,
       "likeCount": 61,
       "commentCount": 0,
       "playlists": [
@@ -3058,7 +3154,7 @@
         "ai لزيادة الإنتاجية"
       ],
       "duration": "PT1M15S",
-      "viewCount": 7726,
+      "viewCount": 7785,
       "likeCount": 152,
       "commentCount": 1,
       "playlists": [
@@ -3154,8 +3250,8 @@
         "ai لزيادة الإنتاجية"
       ],
       "duration": "PT18M10S",
-      "viewCount": 19090,
-      "likeCount": 836,
+      "viewCount": 19155,
+      "likeCount": 839,
       "commentCount": 65,
       "playlists": [
         "PLAjRyApRE2exZyEfvQUzVA8xLDj38OLgH",
@@ -3249,7 +3345,7 @@
         "هبة احمد"
       ],
       "duration": "PT15M25S",
-      "viewCount": 5577,
+      "viewCount": 5583,
       "likeCount": 331,
       "commentCount": 22,
       "playlists": [
@@ -3342,7 +3438,7 @@
         "heba ahmed هبه احمد"
       ],
       "duration": "PT13M48S",
-      "viewCount": 12317,
+      "viewCount": 12316,
       "likeCount": 647,
       "commentCount": 126,
       "playlists": [
@@ -3431,8 +3527,8 @@
         "heba ahmed"
       ],
       "duration": "PT17M49S",
-      "viewCount": 12916,
-      "likeCount": 652,
+      "viewCount": 12936,
+      "likeCount": 655,
       "commentCount": 80,
       "playlists": [
         "PLAjRyApRE2ezuUtmQ4-EWcHshw6KTr3u0",
@@ -3522,7 +3618,7 @@
         "هبة احمد"
       ],
       "duration": "PT5M43S",
-      "viewCount": 2837,
+      "viewCount": 2856,
       "likeCount": 175,
       "commentCount": 34,
       "playlists": [],
@@ -3699,7 +3795,7 @@
         "AI influencer"
       ],
       "duration": "PT16M",
-      "viewCount": 6158,
+      "viewCount": 6159,
       "likeCount": 335,
       "commentCount": 61,
       "playlists": [
@@ -3791,7 +3887,7 @@
         "google ai tools 2026"
       ],
       "duration": "PT14M37S",
-      "viewCount": 26533,
+      "viewCount": 26557,
       "likeCount": 1319,
       "commentCount": 113,
       "playlists": [
@@ -3885,7 +3981,7 @@
         "تعديل السالايدز في notebooklm"
       ],
       "duration": "PT11M21S",
-      "viewCount": 10614,
+      "viewCount": 10620,
       "likeCount": 555,
       "commentCount": 77,
       "playlists": [
@@ -3980,7 +4076,7 @@
         "تحديثات جوجل 2026"
       ],
       "duration": "PT11M33S",
-      "viewCount": 12507,
+      "viewCount": 12509,
       "likeCount": 576,
       "commentCount": 96,
       "playlists": [
@@ -4076,7 +4172,7 @@
         "انشاء جداول في notebooklm"
       ],
       "duration": "PT10M36S",
-      "viewCount": 17350,
+      "viewCount": 17352,
       "likeCount": 972,
       "commentCount": 107,
       "playlists": [
@@ -4170,7 +4266,7 @@
         "GLM 5 Agent node"
       ],
       "duration": "PT16M45S",
-      "viewCount": 14666,
+      "viewCount": 14672,
       "likeCount": 604,
       "commentCount": 92,
       "playlists": [
@@ -4270,7 +4366,7 @@
         "heba ahmed"
       ],
       "duration": "PT15M6S",
-      "viewCount": 4957,
+      "viewCount": 4959,
       "likeCount": 199,
       "commentCount": 52,
       "playlists": [
@@ -4444,9 +4540,9 @@
         "ai image editor"
       ],
       "duration": "PT11M32S",
-      "viewCount": 11384,
-      "likeCount": 715,
-      "commentCount": 74,
+      "viewCount": 11417,
+      "likeCount": 716,
+      "commentCount": 75,
       "playlists": [
         "PLAjRyApRE2exotplnxEQu1EBP16y8jonb",
         "PLAjRyApRE2exZyEfvQUzVA8xLDj38OLgH",
@@ -4543,7 +4639,7 @@
         "mcp tutorial"
       ],
       "duration": "PT15M27S",
-      "viewCount": 9663,
+      "viewCount": 9682,
       "likeCount": 485,
       "commentCount": 37,
       "playlists": [
@@ -4640,8 +4736,8 @@
         "deep research in notebooklm"
       ],
       "duration": "PT9M55S",
-      "viewCount": 12262,
-      "likeCount": 554,
+      "viewCount": 12272,
+      "likeCount": 555,
       "commentCount": 71,
       "playlists": [
         "PLAjRyApRE2exotplnxEQu1EBP16y8jonb",
@@ -4738,7 +4834,7 @@
         "وفر وقتك"
       ],
       "duration": "PT12M34S",
-      "viewCount": 4322,
+      "viewCount": 4323,
       "likeCount": 283,
       "commentCount": 52,
       "playlists": [
@@ -4823,7 +4919,7 @@
         "heba ahmed"
       ],
       "duration": "PT15M44S",
-      "viewCount": 6126,
+      "viewCount": 6128,
       "likeCount": 374,
       "commentCount": 76,
       "playlists": [],
@@ -4899,7 +4995,7 @@
         "هبة احمد"
       ],
       "duration": "PT13M41S",
-      "viewCount": 3054,
+      "viewCount": 3055,
       "likeCount": 178,
       "commentCount": 16,
       "playlists": [
@@ -4993,8 +5089,8 @@
         "minimax m2.1"
       ],
       "duration": "PT17M26S",
-      "viewCount": 111540,
-      "likeCount": 319,
+      "viewCount": 111545,
+      "likeCount": 320,
       "commentCount": 60,
       "playlists": [
         "PLAjRyApRE2ez6VXixKm6addACuxQ9k-26",
@@ -5078,7 +5174,7 @@
         "هبة احمد"
       ],
       "duration": "PT11M21S",
-      "viewCount": 11494,
+      "viewCount": 11503,
       "likeCount": 509,
       "commentCount": 73,
       "playlists": [
@@ -5265,7 +5361,7 @@
         "اخبار الذكاء الاصطناعي"
       ],
       "duration": "PT13M57S",
-      "viewCount": 5276,
+      "viewCount": 5277,
       "likeCount": 263,
       "commentCount": 81,
       "playlists": [
@@ -5459,7 +5555,7 @@
         "deep research in notebooklm"
       ],
       "duration": "PT9M47S",
-      "viewCount": 15600,
+      "viewCount": 15604,
       "likeCount": 899,
       "commentCount": 123,
       "playlists": [
@@ -5646,7 +5742,7 @@
         "new gemini ai coder"
       ],
       "duration": "PT11M24S",
-      "viewCount": 13961,
+      "viewCount": 13970,
       "likeCount": 619,
       "commentCount": 146,
       "playlists": [
@@ -5743,7 +5839,7 @@
         "deep research in notebooklm"
       ],
       "duration": "PT20M9S",
-      "viewCount": 31938,
+      "viewCount": 31946,
       "likeCount": 1463,
       "commentCount": 119,
       "playlists": [
@@ -5837,7 +5933,7 @@
         "هبة احمد"
       ],
       "duration": "PT10M57S",
-      "viewCount": 6885,
+      "viewCount": 6891,
       "likeCount": 405,
       "commentCount": 29,
       "playlists": [],
@@ -5921,7 +6017,7 @@
         "kimi k2 thinking"
       ],
       "duration": "PT14M54S",
-      "viewCount": 19176,
+      "viewCount": 19180,
       "likeCount": 975,
       "commentCount": 155,
       "playlists": [
@@ -6119,7 +6215,7 @@
         "minimax m2"
       ],
       "duration": "PT17M32S",
-      "viewCount": 19414,
+      "viewCount": 19424,
       "likeCount": 800,
       "commentCount": 72,
       "playlists": [
@@ -6205,7 +6301,7 @@
         "هبة احمد"
       ],
       "duration": "PT20M56S",
-      "viewCount": 8159,
+      "viewCount": 8165,
       "likeCount": 440,
       "commentCount": 72,
       "playlists": [
@@ -6478,7 +6574,7 @@
         "nano banana for free"
       ],
       "duration": "PT31M3S",
-      "viewCount": 4634,
+      "viewCount": 4639,
       "likeCount": 234,
       "commentCount": 31,
       "playlists": [
@@ -6743,7 +6839,7 @@
         "هبة احمد"
       ],
       "duration": "PT18M8S",
-      "viewCount": 21648,
+      "viewCount": 21654,
       "likeCount": 725,
       "commentCount": 43,
       "playlists": [
@@ -6842,7 +6938,7 @@
         "بديل chatgpt 5"
       ],
       "duration": "PT19M22S",
-      "viewCount": 27597,
+      "viewCount": 27599,
       "likeCount": 1247,
       "commentCount": 208,
       "playlists": [
@@ -6932,8 +7028,8 @@
         "gemini tool in n8n"
       ],
       "duration": "PT37M37S",
-      "viewCount": 9054,
-      "likeCount": 375,
+      "viewCount": 9070,
+      "likeCount": 378,
       "commentCount": 70,
       "playlists": [
         "PLAjRyApRE2eyFwDOxAPxouFwbtyrXG1dA",
@@ -7115,7 +7211,7 @@
       ],
       "duration": "PT8M14S",
       "viewCount": 5076,
-      "likeCount": 263,
+      "likeCount": 262,
       "commentCount": 16,
       "playlists": [
         "PLAjRyApRE2exZyEfvQUzVA8xLDj38OLgH",
@@ -7212,7 +7308,7 @@
         "بديل chatgpt 5"
       ],
       "duration": "PT19M24S",
-      "viewCount": 21968,
+      "viewCount": 21970,
       "likeCount": 1070,
       "commentCount": 166,
       "playlists": [
@@ -7409,7 +7505,7 @@
         "OpenAI"
       ],
       "duration": "PT15M33S",
-      "viewCount": 6038,
+      "viewCount": 6039,
       "likeCount": 344,
       "commentCount": 38,
       "playlists": [
@@ -7598,7 +7694,7 @@
         "نموذج صيني جديد"
       ],
       "duration": "PT15M3S",
-      "viewCount": 14796,
+      "viewCount": 14797,
       "likeCount": 778,
       "commentCount": 85,
       "playlists": [
@@ -7799,7 +7895,7 @@
         "new ai tools"
       ],
       "duration": "PT14M6S",
-      "viewCount": 68215,
+      "viewCount": 68239,
       "likeCount": 3463,
       "commentCount": 325,
       "playlists": [
@@ -7878,7 +7974,7 @@
         "افضل وكيل ذكاء اصطناعي موجود"
       ],
       "duration": "PT25M17S",
-      "viewCount": 13095,
+      "viewCount": 13096,
       "likeCount": 658,
       "commentCount": 64,
       "playlists": [
@@ -8071,7 +8167,7 @@
         "agentic ai"
       ],
       "duration": "PT13M49S",
-      "viewCount": 9400,
+      "viewCount": 9401,
       "likeCount": 410,
       "commentCount": 42,
       "playlists": [
@@ -8261,7 +8357,7 @@
         "deepsite v2"
       ],
       "duration": "PT12M57S",
-      "viewCount": 17595,
+      "viewCount": 17601,
       "likeCount": 764,
       "commentCount": 92,
       "playlists": [
@@ -8354,7 +8450,7 @@
         "use gemini in visual studio code"
       ],
       "duration": "PT10M10S",
-      "viewCount": 10795,
+      "viewCount": 10797,
       "likeCount": 445,
       "commentCount": 39,
       "playlists": [
@@ -8447,7 +8543,7 @@
         "تجربة ممفصلة ل gemini cli"
       ],
       "duration": "PT22M20S",
-      "viewCount": 21923,
+      "viewCount": 21924,
       "likeCount": 836,
       "commentCount": 83,
       "playlists": [
@@ -8626,7 +8722,7 @@
         "ذكاء اصطناعي بدون اشتراك"
       ],
       "duration": "PT20M47S",
-      "viewCount": 23798,
+      "viewCount": 23803,
       "likeCount": 904,
       "commentCount": 88,
       "playlists": [
@@ -8823,7 +8919,7 @@
         "هبة احمد"
       ],
       "duration": "PT13M29S",
-      "viewCount": 3884,
+      "viewCount": 3886,
       "likeCount": 189,
       "commentCount": 38,
       "playlists": [
@@ -9008,8 +9104,8 @@
         "messenger n8n"
       ],
       "duration": "PT24M56S",
-      "viewCount": 18932,
-      "likeCount": 638,
+      "viewCount": 18952,
+      "likeCount": 639,
       "commentCount": 138,
       "playlists": [
         "PLAjRyApRE2eyFwDOxAPxouFwbtyrXG1dA",
@@ -9293,7 +9389,7 @@
         "Sonnet4 release"
       ],
       "duration": "PT9M47S",
-      "viewCount": 6174,
+      "viewCount": 6175,
       "likeCount": 289,
       "commentCount": 65,
       "playlists": [
@@ -9383,8 +9479,8 @@
         "free api"
       ],
       "duration": "PT19M31S",
-      "viewCount": 24216,
-      "likeCount": 1054,
+      "viewCount": 24219,
+      "likeCount": 1055,
       "commentCount": 165,
       "playlists": [
         "PLAjRyApRE2eyFwDOxAPxouFwbtyrXG1dA",
@@ -9472,8 +9568,8 @@
         "self hosting n8n on hostinger"
       ],
       "duration": "PT28M23S",
-      "viewCount": 44430,
-      "likeCount": 1859,
+      "viewCount": 44435,
+      "likeCount": 1860,
       "commentCount": 303,
       "playlists": [
         "PLAjRyApRE2eyFwDOxAPxouFwbtyrXG1dA",
@@ -9571,7 +9667,7 @@
         "Business Automation"
       ],
       "duration": "PT5M18S",
-      "viewCount": 3958,
+      "viewCount": 3959,
       "likeCount": 424,
       "commentCount": 199,
       "playlists": [
@@ -9659,7 +9755,7 @@
         "هبة احمد"
       ],
       "duration": "PT4M12S",
-      "viewCount": 2905,
+      "viewCount": 2906,
       "likeCount": 198,
       "commentCount": 33,
       "playlists": [
@@ -9839,7 +9935,7 @@
         "google cloud next 25"
       ],
       "duration": "PT13M43S",
-      "viewCount": 18955,
+      "viewCount": 18956,
       "likeCount": 568,
       "commentCount": 112,
       "playlists": [
@@ -9932,7 +10028,7 @@
         "هبة احمد"
       ],
       "duration": "PT10M50S",
-      "viewCount": 25544,
+      "viewCount": 25545,
       "likeCount": 1099,
       "commentCount": 113,
       "playlists": [
@@ -10122,7 +10218,7 @@
         "هبة احمد"
       ],
       "duration": "PT15M19S",
-      "viewCount": 27764,
+      "viewCount": 27787,
       "likeCount": 907,
       "commentCount": 87,
       "playlists": [
@@ -10210,8 +10306,8 @@
         "mcp tutorial"
       ],
       "duration": "PT16M41S",
-      "viewCount": 47383,
-      "likeCount": 2264,
+      "viewCount": 47394,
+      "likeCount": 2265,
       "commentCount": 263,
       "playlists": [
         "PLAjRyApRE2ewCKwO1uiLl-YwXKml23xjf",
@@ -10298,7 +10394,7 @@
         "deepseek v3 0324"
       ],
       "duration": "PT13M15S",
-      "viewCount": 6083,
+      "viewCount": 6084,
       "likeCount": 416,
       "commentCount": 140,
       "playlists": [
@@ -10489,7 +10585,7 @@
         "free canvas feature in gemini"
       ],
       "duration": "PT11M27S",
-      "viewCount": 14485,
+      "viewCount": 14505,
       "likeCount": 786,
       "commentCount": 143,
       "playlists": [
@@ -10772,7 +10868,7 @@
         "heba ahmed ai"
       ],
       "duration": "PT13M5S",
-      "viewCount": 47174,
+      "viewCount": 47186,
       "likeCount": 1673,
       "commentCount": 213,
       "playlists": [
@@ -10874,7 +10970,7 @@
         "استخراج النصوص من الصور"
       ],
       "duration": "PT11M16S",
-      "viewCount": 9610,
+      "viewCount": 9612,
       "likeCount": 527,
       "commentCount": 91,
       "playlists": [
@@ -11346,7 +11442,7 @@
         "chatgpt o3"
       ],
       "duration": "PT10M40S",
-      "viewCount": 7808,
+      "viewCount": 7809,
       "likeCount": 440,
       "commentCount": 110,
       "playlists": [
@@ -11435,7 +11531,7 @@
         "groq ai"
       ],
       "duration": "PT13M37S",
-      "viewCount": 11054,
+      "viewCount": 11056,
       "likeCount": 605,
       "commentCount": 127,
       "playlists": [
@@ -11979,7 +12075,7 @@
         "new qwen model versus deepseek"
       ],
       "duration": "PT12M41S",
-      "viewCount": 27157,
+      "viewCount": 27159,
       "likeCount": 1066,
       "commentCount": 170,
       "playlists": [
@@ -12156,7 +12252,7 @@
         "perplexity pages"
       ],
       "duration": "PT12M37S",
-      "viewCount": 12205,
+      "viewCount": 12208,
       "likeCount": 503,
       "commentCount": 89,
       "playlists": [
@@ -12419,7 +12515,7 @@
         "heba ahmed"
       ],
       "duration": "PT7M37S",
-      "viewCount": 81729,
+      "viewCount": 81748,
       "likeCount": 1325,
       "commentCount": 322,
       "playlists": [
@@ -12586,7 +12682,7 @@
         "هبة احمد"
       ],
       "duration": "PT13M43S",
-      "viewCount": 8520,
+      "viewCount": 8522,
       "likeCount": 392,
       "commentCount": 74,
       "playlists": [
@@ -12940,7 +13036,7 @@
         "AGI"
       ],
       "duration": "PT8M7S",
-      "viewCount": 3186,
+      "viewCount": 3187,
       "likeCount": 245,
       "commentCount": 48,
       "playlists": [
@@ -13329,7 +13425,7 @@
         "هبة احمد"
       ],
       "duration": "PT14M40S",
-      "viewCount": 16620,
+      "viewCount": 16632,
       "likeCount": 501,
       "commentCount": 71,
       "playlists": [
@@ -13418,7 +13514,7 @@
         "نماذج مفتوحة المصدر"
       ],
       "duration": "PT8M32S",
-      "viewCount": 6667,
+      "viewCount": 6668,
       "likeCount": 486,
       "commentCount": 67,
       "playlists": [
@@ -13704,8 +13800,8 @@
         "ai"
       ],
       "duration": "PT11M13S",
-      "viewCount": 6297,
-      "likeCount": 360,
+      "viewCount": 6302,
+      "likeCount": 361,
       "commentCount": 60,
       "playlists": [
         "PLAjRyApRE2ex_11DEvfKJaqhwrfZocoIh",
@@ -13804,7 +13900,7 @@
         "Claude Mcp agents"
       ],
       "duration": "PT8M2S",
-      "viewCount": 2639,
+      "viewCount": 2640,
       "likeCount": 222,
       "commentCount": 31,
       "playlists": [
@@ -13884,7 +13980,7 @@
         "notebooklm"
       ],
       "duration": "PT12M7S",
-      "viewCount": 13452,
+      "viewCount": 13470,
       "likeCount": 592,
       "commentCount": 78,
       "playlists": [
@@ -14507,7 +14603,7 @@
         "how to use monica ai extension"
       ],
       "duration": "PT6M4S",
-      "viewCount": 14913,
+      "viewCount": 14914,
       "likeCount": 819,
       "commentCount": 112,
       "playlists": [
@@ -14587,7 +14683,7 @@
         "claude 3.5 sonnet new"
       ],
       "duration": "PT8M52S",
-      "viewCount": 4005,
+      "viewCount": 4006,
       "likeCount": 315,
       "commentCount": 74,
       "playlists": [
@@ -14851,7 +14947,7 @@
         "اشكال"
       ],
       "duration": "PT9M50S",
-      "viewCount": 16666,
+      "viewCount": 16667,
       "likeCount": 730,
       "commentCount": 84,
       "playlists": [
@@ -15035,7 +15131,7 @@
         "how to use notebooklm"
       ],
       "duration": "PT3M15S",
-      "viewCount": 20639,
+      "viewCount": 20647,
       "likeCount": 472,
       "commentCount": 57,
       "playlists": [
@@ -15128,7 +15224,7 @@
         "how to use notebooklm"
       ],
       "duration": "PT11M23S",
-      "viewCount": 6712,
+      "viewCount": 6713,
       "likeCount": 460,
       "commentCount": 66,
       "playlists": [
@@ -15403,7 +15499,7 @@
         "how to run llama 3.1 locally on windows"
       ],
       "duration": "PT12M8S",
-      "viewCount": 6183,
+      "viewCount": 6182,
       "likeCount": 335,
       "commentCount": 91,
       "playlists": [
@@ -15502,7 +15598,7 @@
         "تحليل الصور"
       ],
       "duration": "PT10M58S",
-      "viewCount": 2454,
+      "viewCount": 2455,
       "likeCount": 170,
       "commentCount": 61,
       "playlists": [
@@ -15766,7 +15862,7 @@
         "الحصول على الاوامر من فيديو يوتيوب"
       ],
       "duration": "PT7M9S",
-      "viewCount": 6921,
+      "viewCount": 6928,
       "likeCount": 348,
       "commentCount": 73,
       "playlists": [
@@ -15929,8 +16025,8 @@
         "how to write perfect prompt"
       ],
       "duration": "PT10M28S",
-      "viewCount": 39930,
-      "likeCount": 2219,
+      "viewCount": 40065,
+      "likeCount": 2224,
       "commentCount": 204,
       "playlists": [
         "PLAjRyApRE2ewn2lUtCYOMSFcCuDP00pYs"
@@ -16015,7 +16111,7 @@
         "chain of thought"
       ],
       "duration": "PT8M59S",
-      "viewCount": 4681,
+      "viewCount": 4683,
       "likeCount": 271,
       "commentCount": 54,
       "playlists": [
@@ -16103,7 +16199,7 @@
         "q star news"
       ],
       "duration": "PT9M21S",
-      "viewCount": 1533,
+      "viewCount": 1534,
       "likeCount": 106,
       "commentCount": 22,
       "playlists": [
@@ -16189,7 +16285,7 @@
         "عمل فلوشارت بالذكاء الاصطناعي"
       ],
       "duration": "PT9M25S",
-      "viewCount": 8782,
+      "viewCount": 8789,
       "likeCount": 345,
       "commentCount": 48,
       "playlists": [
@@ -16628,7 +16724,7 @@
         "gemini data analysis"
       ],
       "duration": "PT12M49S",
-      "viewCount": 2887,
+      "viewCount": 2891,
       "likeCount": 169,
       "commentCount": 53,
       "playlists": [
@@ -16712,8 +16808,8 @@
         "elicit vs scispace"
       ],
       "duration": "PT11M2S",
-      "viewCount": 10187,
-      "likeCount": 526,
+      "viewCount": 10207,
+      "likeCount": 529,
       "commentCount": 42,
       "playlists": [
         "PLAjRyApRE2ey77J1ZwEPt2tnQTYsZaD9M",
@@ -16797,7 +16893,7 @@
         "ai literature review"
       ],
       "duration": "PT8M8S",
-      "viewCount": 2049,
+      "viewCount": 2050,
       "likeCount": 123,
       "commentCount": 38,
       "playlists": [
@@ -17164,7 +17260,7 @@
         "عمل سيرة ذاتية بالعربي مجانا"
       ],
       "duration": "PT9M34S",
-      "viewCount": 8142,
+      "viewCount": 8150,
       "likeCount": 311,
       "commentCount": 47,
       "playlists": [
@@ -17336,8 +17432,8 @@
         "write paper from thesis by AI"
       ],
       "duration": "PT12M3S",
-      "viewCount": 12049,
-      "likeCount": 509,
+      "viewCount": 12063,
+      "likeCount": 510,
       "commentCount": 77,
       "playlists": [
         "PLAjRyApRE2eyYsVjhTONkP_TZH6v48n7J",
@@ -17490,7 +17586,7 @@
         "literaure review by AI"
       ],
       "duration": "PT12M1S",
-      "viewCount": 13005,
+      "viewCount": 13013,
       "likeCount": 616,
       "commentCount": 40,
       "playlists": [
@@ -17569,7 +17665,7 @@
         "عمل فيديوهات بالذكاء الاصطناعي"
       ],
       "duration": "PT12M33S",
-      "viewCount": 2685,
+      "viewCount": 2688,
       "likeCount": 130,
       "commentCount": 35,
       "playlists": [
@@ -17951,7 +18047,7 @@
         "claude artifacts tutorial"
       ],
       "duration": "PT9M36S",
-      "viewCount": 2871,
+      "viewCount": 2872,
       "likeCount": 172,
       "commentCount": 69,
       "playlists": [
@@ -18024,7 +18120,7 @@
         "scispace ai writer"
       ],
       "duration": "PT13M25S",
-      "viewCount": 4633,
+      "viewCount": 4636,
       "likeCount": 305,
       "commentCount": 54,
       "playlists": [
@@ -18097,9 +18193,9 @@
         "create claude account"
       ],
       "duration": "PT54S",
-      "viewCount": 92233,
-      "likeCount": 1033,
-      "commentCount": 102,
+      "viewCount": 92541,
+      "likeCount": 1035,
+      "commentCount": 103,
       "playlists": [],
       "youtubeUrl": "https://www.youtube.com/watch?v=ItwxGNGShlw",
       "seo": {
@@ -18160,7 +18256,7 @@
         "new model"
       ],
       "duration": "PT10M42S",
-      "viewCount": 9074,
+      "viewCount": 9077,
       "likeCount": 372,
       "commentCount": 120,
       "playlists": [
@@ -18235,7 +18331,7 @@
         "تحريك الصور بالذكاء الاصطناعي"
       ],
       "duration": "PT7M5S",
-      "viewCount": 14020,
+      "viewCount": 14021,
       "likeCount": 308,
       "commentCount": 74,
       "playlists": [
@@ -18314,7 +18410,7 @@
         "notetaking"
       ],
       "duration": "PT13M31S",
-      "viewCount": 9021,
+      "viewCount": 9023,
       "likeCount": 532,
       "commentCount": 86,
       "playlists": [
@@ -18661,7 +18757,7 @@
         "gemini versus chatgpt"
       ],
       "duration": "PT17M22S",
-      "viewCount": 18978,
+      "viewCount": 18980,
       "likeCount": 747,
       "commentCount": 149,
       "playlists": [
@@ -18793,7 +18889,7 @@
       "channelTitle": "Heba Ahmed - هبة احمد",
       "tags": [],
       "duration": "PT58S",
-      "viewCount": 3107,
+      "viewCount": 3108,
       "likeCount": 184,
       "commentCount": 5,
       "playlists": [],
@@ -19062,7 +19158,7 @@
       "channelTitle": "Heba Ahmed - هبة احمد",
       "tags": [],
       "duration": "PT1M",
-      "viewCount": 2861,
+      "viewCount": 2862,
       "likeCount": 210,
       "commentCount": 7,
       "playlists": [
@@ -19137,8 +19233,8 @@
         "قراءة_PDF"
       ],
       "duration": "PT21M22S",
-      "viewCount": 5982,
-      "likeCount": 334,
+      "viewCount": 5985,
+      "likeCount": 335,
       "commentCount": 47,
       "playlists": [
         "PLAjRyApRE2ewn2lUtCYOMSFcCuDP00pYs",
@@ -19209,7 +19305,7 @@
         "تصميم العروض التقديمية بالذكاء الاصطناعى"
       ],
       "duration": "PT10M2S",
-      "viewCount": 27210,
+      "viewCount": 27211,
       "likeCount": 1179,
       "commentCount": 76,
       "playlists": [
@@ -19285,7 +19381,7 @@
         "تلخيص المقالات باستخدام تشات بى دى اف"
       ],
       "duration": "PT27M43S",
-      "viewCount": 29265,
+      "viewCount": 29270,
       "likeCount": 818,
       "commentCount": 71,
       "playlists": [
@@ -19419,8 +19515,8 @@
       "channelTitle": "Heba Ahmed - هبة احمد",
       "tags": [],
       "duration": "PT58S",
-      "viewCount": 58690,
-      "likeCount": 1280,
+      "viewCount": 58832,
+      "likeCount": 1283,
       "commentCount": 40,
       "playlists": [
         "PLAjRyApRE2ewn2lUtCYOMSFcCuDP00pYs"
@@ -19630,7 +19726,7 @@
         "how to use canva to markey your business"
       ],
       "duration": "PT8M18S",
-      "viewCount": 573,
+      "viewCount": 574,
       "likeCount": 23,
       "commentCount": 4,
       "playlists": [
@@ -19707,7 +19803,7 @@
         "قص الصورة لاى شكل"
       ],
       "duration": "PT2M31S",
-      "viewCount": 14804,
+      "viewCount": 14810,
       "likeCount": 169,
       "commentCount": 32,
       "playlists": [
@@ -19782,7 +19878,7 @@
         "البحث العلمي بمساعدة مايكروسوفت كوبيلوت"
       ],
       "duration": "PT17M5S",
-      "viewCount": 3247,
+      "viewCount": 3249,
       "likeCount": 133,
       "commentCount": 23,
       "playlists": [
@@ -19952,7 +20048,7 @@
         "ai in literature review"
       ],
       "duration": "PT11M20S",
-      "viewCount": 5771,
+      "viewCount": 5779,
       "likeCount": 268,
       "commentCount": 27,
       "playlists": [
@@ -20098,7 +20194,7 @@
         "إعادة صياغة"
       ],
       "duration": "PT11M12S",
-      "viewCount": 2076,
+      "viewCount": 2078,
       "likeCount": 93,
       "commentCount": 13,
       "playlists": [
@@ -20175,7 +20271,7 @@
         "أساليب سايسبيس في تحليل البيانات"
       ],
       "duration": "PT19M6S",
-      "viewCount": 3679,
+      "viewCount": 3682,
       "likeCount": 172,
       "commentCount": 11,
       "playlists": [
@@ -20255,7 +20351,7 @@
         "how to use scispace in literature review"
       ],
       "duration": "PT19M21S",
-      "viewCount": 11278,
+      "viewCount": 11282,
       "likeCount": 424,
       "commentCount": 37,
       "playlists": [
@@ -20370,7 +20466,7 @@
       "channelTitle": "Heba Ahmed - هبة احمد",
       "tags": [],
       "duration": "PT14M7S",
-      "viewCount": 2842,
+      "viewCount": 2846,
       "likeCount": 168,
       "commentCount": 35,
       "playlists": [
